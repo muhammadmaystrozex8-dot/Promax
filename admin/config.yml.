@@ -1,0 +1,14 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "images"
+public_folder: "/images"
+collections:
+  - name: "content"
+    label: "المحتوى"
+    files:
+      - file: "index.html"
+        label: "الصفحة الرئيسية"
+        name: "home"
+        fields:
+          - {label: "العنوان الرئيسي", name: "title", widget: "string"}
