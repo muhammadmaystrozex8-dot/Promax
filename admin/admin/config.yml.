@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: muhammadmaystrozex8-dot/Promax
   branch: main
 media_folder: "images"
 public_folder: "/images"
