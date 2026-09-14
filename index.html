@@ -322,7 +322,7 @@
             font-size: 2rem;
         }
 
-        /* قسم الخدمات (بيع أجهزة جديدة ومستعملة + إكسسوارات + صيانة) */
+        /* قسم الخدمات */
         .section-header {
             text-align: center;
             margin-bottom: 18px;
@@ -588,17 +588,6 @@
             background: var(--bg-obsidian);
         }
 
-        .device-card-img-placeholder {
-            width: 100%;
-            height: 130px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, rgba(212,175,55,0.18), rgba(18,23,34,1));
-            color: var(--gold-primary);
-            font-size: 2.1rem;
-        }
-
         .device-card-body {
             padding: 12px;
         }
@@ -621,16 +610,6 @@
             font-size: 0.82rem;
             font-weight: 800;
             color: var(--gold-bright);
-        }
-
-        /* الفوتر ومعلومات التواصل */
-        .footer-box {
-            text-align: center;
-            padding: 24px 16px;
-            border-top: 1px solid var(--border-gold);
-            background: #050608;
-            font-size: 0.78rem;
-            color: var(--text-secondary);
         }
     </style>
 </head>
@@ -699,14 +678,13 @@
             <div class="gallery-img"><i class="fa-solid fa-battery-full"></i></div>
         </div>
 
-        <!-- قسم الخدمات الرئيسية (جديد ومستعمل وإكسسوارات وصيانة) -->
+        <!-- قسم الخدمات الرئيسية -->
         <div class="section-header">
             <div class="section-tag">خدماتنا</div>
             <h2 class="section-heading">كل ما يحتاجه هاتفك تحت سقف واحد</h2>
         </div>
 
         <div class="service-cards">
-            <!-- 1. بيع الأجهزة -->
             <div class="service-card">
                 <div class="service-card-right">
                     <div class="service-icon"><i class="fa-solid fa-mobile"></i></div>
@@ -718,7 +696,6 @@
                 <a href="#devices-gallery" class="service-link">تصفح الأجهزة ←</a>
             </div>
 
-            <!-- 2. الإكسسوارات -->
             <div class="service-card">
                 <div class="service-card-right">
                     <div class="service-icon"><i class="fa-solid fa-headphones"></i></div>
@@ -730,7 +707,6 @@
                 <a href="#accessories-gallery" class="service-link">تصفح الإكسسوارات ←</a>
             </div>
 
-            <!-- 3. الصيانة السريعة -->
             <div class="service-card">
                 <div class="service-card-right">
                     <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
@@ -740,18 +716,6 @@
                     </div>
                 </div>
                 <a href="#maintenance-gallery" class="service-link">أسعار الصيانة ←</a>
-            </div>
-
-            <!-- 4. الخدمات المساعدة -->
-            <div class="service-card">
-                <div class="service-card-right">
-                    <div class="service-icon"><i class="fa-solid fa-database"></i></div>
-                    <div>
-                        <div class="service-title">الخدمات المساعدة</div>
-                        <div class="service-desc">نقل البيانات، إنشاء وتفعيل الحسابات، وصيانة السوفتوير وتحديثه بأمان.</div>
-                    </div>
-                </div>
-                <a href="https://wa.me/905314531305?text=مرحباً، أريد الاستفسار عن الخدمات المساعدة (نقل بيانات / حسابات / صيانة سوفتوير)" target="_blank" class="service-link">اعرف المزيد ←</a>
             </div>
         </div>
 
@@ -764,7 +728,7 @@
 
             <div class="devices-grid">
                 <div class="device-card">
-                    <div class="device-card-img-placeholder"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <img src="https://images.unsplash.com/photo-1632661674596-df8be070a5c5?w=500" alt="iPhone 13 Pro" class="device-card-img">
                     <div class="device-card-body">
                         <div class="device-card-title">iPhone 13 Pro</div>
                         <div class="device-card-desc">شاشة Super Retina XDR - معالج A15 Bionic - كاميرا ثلاثية 12MP. البطارية: 100%</div>
@@ -772,18 +736,10 @@
                     </div>
                 </div>
                 <div class="device-card">
-                    <div class="device-card-img-placeholder"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500" alt="Redmi 13" class="device-card-img">
                     <div class="device-card-body">
                         <div class="device-card-title">Redmi 13</div>
                         <div class="device-card-desc">شاشة كبيرة ومعالج موفر للطاقة وبطارية عالية السعة. نظافة 100%</div>
-                        <div class="device-card-price">متوفر</div>
-                    </div>
-                </div>
-                <div class="device-card">
-                    <div class="device-card-img-placeholder"><i class="fa-solid fa-mobile-screen-button"></i></div>
-                    <div class="device-card-body">
-                        <div class="device-card-title">Samsung S26 (نسخة كوبي)</div>
-                        <div class="device-card-desc">مساحة تخزين 1 تيرابايت - رام 12 جيجابايت (نسخة كوبي)</div>
                         <div class="device-card-price">متوفر</div>
                     </div>
                 </div>
@@ -799,7 +755,7 @@
 
             <div class="devices-grid">
                 <div class="device-card">
-                    <div class="device-card-img-placeholder"><i class="fa-solid fa-bolt"></i></div>
+                    <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=500" alt="شواحن جدارية سريعة" class="device-card-img">
                     <div class="device-card-body">
                         <div class="device-card-title">شواحن جدارية سريعة (PD / GaN)</div>
                         <div class="device-card-desc">شواحن بتقنية حديثة وعالية القدرة لحماية البطارية وتسريع الشحن.</div>
@@ -807,7 +763,7 @@
                     </div>
                 </div>
                 <div class="device-card">
-                    <div class="device-card-img-placeholder"><i class="fa-solid fa-headphones"></i></div>
+                    <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500" alt="سماعات لاسلكية" class="device-card-img">
                     <div class="device-card-body">
                         <div class="device-card-title">سماعات لاسلكية (TWS)</div>
                         <div class="device-card-desc">سماعات بتصميم عصري وصوت نقي مع بطارية تدوم طويلاً.</div>
@@ -815,7 +771,7 @@
                     </div>
                 </div>
                 <div class="device-card">
-                    <div class="device-card-img-placeholder"><i class="fa-solid fa-shield"></i></div>
+                    <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=500" alt="واقيات شاشة نانو" class="device-card-img">
                     <div class="device-card-body">
                         <div class="device-card-title">واقيات شاشة نانو وحراري</div>
                         <div class="device-card-desc">طبقات حماية فائقة النحافة تحافظ على حساسية اللمس والخدوش.</div>
@@ -823,86 +779,11 @@
                     </div>
                 </div>
                 <div class="device-card">
-                    <div class="device-card-img-placeholder"><i class="fa-solid fa-mobile"></i></div>
-                    <div class="device-card-body">
-                        <div class="device-card-title">كفرات حماية مضادة للصدمات</div>
-                        <div class="device-card-desc">كفرات بتصميمات شفافة وملونة مع دعم للمسكة الخلفية.</div>
-                        <div class="device-card-price">متوفر</div>
-                    </div>
-                </div>
-                <div class="device-card">
-                    <div class="device-card-img-placeholder"><i class="fa-solid fa-plug"></i></div>
-                    <div class="device-card-body">
-                        <div class="device-card-title">كيابل شحن معززة ومضفرة</div>
-                        <div class="device-card-desc">كيابل مغلفة بالنايلون أو السيليكون مقاومة للقطع وتدعم النقل السريع.</div>
-                        <div class="device-card-price">متوفر</div>
-                    </div>
-                </div>
-                <div class="device-card">
-                    <div class="device-card-img-placeholder"><i class="fa-solid fa-battery-full"></i></div>
+                    <img src="https://images.unsplash.com/photo-1609592235391-d49e102f9e4f?w=500" alt="باور بانك" class="device-card-img">
                     <div class="device-card-body">
                         <div class="device-card-title">باور بانك سريع (10k / 20k mAh)</div>
                         <div class="device-card-desc">بطاريات متنقلة بسعات عالية ومنافذ متعددة للشحن السريع.</div>
                         <div class="device-card-price">متوفر</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- قسم خدمات الصيانة -->
-        <div class="devices-section" id="maintenance-gallery">
-            <div class="section-header">
-                <div class="section-tag">صيانتنا</div>
-                <h2 class="section-heading">خدمات الصيانة المتوفرة</h2>
-            </div>
-
-            <div class="devices-grid">
-                <div class="device-card">
-                    <div class="device-card-img-placeholder"><i class="fa-solid fa-display"></i></div>
-                    <div class="device-card-body">
-                        <div class="device-card-title">تبديل الشاشة</div>
-                        <div class="device-card-desc">شاشات أصلية وبديلة عالية الجودة لجميع الموديلات.</div>
-                        <div class="device-card-price">السعر</div>
-                    </div>
-                </div>
-                <div class="device-card">
-                    <div class="device-card-img-placeholder"><i class="fa-solid fa-battery-half"></i></div>
-                    <div class="device-card-body">
-                        <div class="device-card-title">تبديل البطارية</div>
-                        <div class="device-card-desc">بطاريات أصلية تعيد لجهازك عمر استخدام أطول.</div>
-                        <div class="device-card-price">السعر</div>
-                    </div>
-                </div>
-                <div class="device-card">
-                    <div class="device-card-img-placeholder"><i class="fa-solid fa-wifi"></i></div>
-                    <div class="device-card-body">
-                        <div class="device-card-title">مشاكل الشبكة</div>
-                        <div class="device-card-desc">تشخيص وإصلاح مشاكل الاتصال والشبكة.</div>
-                        <div class="device-card-price">السعر</div>
-                    </div>
-                </div>
-                <div class="device-card">
-                    <div class="device-card-img-placeholder"><i class="fa-solid fa-laptop-code"></i></div>
-                    <div class="device-card-body">
-                        <div class="device-card-title">إصلاح السوفتوير</div>
-                        <div class="device-card-desc">حل مشاكل النظام والتحديثات وإعادة التهيئة.</div>
-                        <div class="device-card-price">السعر</div>
-                    </div>
-                </div>
-                <div class="device-card">
-                    <div class="device-card-img-placeholder"><i class="fa-solid fa-plug-circle-bolt"></i></div>
-                    <div class="device-card-body">
-                        <div class="device-card-title">منفذ الشحن</div>
-                        <div class="device-card-desc">إصلاح أو تبديل منفذ الشحن التالف.</div>
-                        <div class="device-card-price">السعر</div>
-                    </div>
-                </div>
-                <div class="device-card">
-                    <div class="device-card-img-placeholder"><i class="fa-solid fa-camera"></i></div>
-                    <div class="device-card-body">
-                        <div class="device-card-title">إصلاح الكاميرا</div>
-                        <div class="device-card-desc">تبديل وحدة الكاميرا وحل مشاكل التصوير.</div>
-                        <div class="device-card-price">السعر</div>
                     </div>
                 </div>
             </div>
@@ -925,20 +806,6 @@
                     <div class="why-item-text">
                         <h4>قطع أصلية</h4>
                         <p>نستخدم قطع غيار وإكسسوارات أصلية مفحوصة لضمان الأداء.</p>
-                    </div>
-                </div>
-                <div class="why-item">
-                    <i class="fa-solid fa-clock"></i>
-                    <div class="why-item-text">
-                        <h4>سرعة في التسليم</h4>
-                        <p>معظم عمليات تبديل الشاشة والبطارية تُنجز في نفس اليوم.</p>
-                    </div>
-                </div>
-                <div class="why-item">
-                    <i class="fa-solid fa-wand-magic-sparkles"></i>
-                    <div class="why-item-text">
-                        <h4>فحص مجاني</h4>
-                        <p>تشخيص كامل للجهاز وتوضيح التكلفة قبل أي عمل.</p>
                     </div>
                 </div>
             </div>
@@ -973,209 +840,44 @@
             </a>
         </div>
 
-        <!-- كيف نعمل (3 خطوات) -->
-        <div class="steps-container">
-            <div class="section-tag" style="text-align: center;">كيف نعمل</div>
-            <h2 class="section-heading" style="text-align: center;">ثلاث خطوات ويصبح هاتفك كالجديد</h2>
-
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-num">1</div>
-                    <div class="step-info">
-                        <h4>تواصل معنا</h4>
-                        <p>راسلنا عبر النموذج أو الواتساب، ووصف لنا مشكلة الجهاز أو ما تبحث عنه.</p>
-                    </div>
-                </div>
-
-                <div class="step-card">
-                    <div class="step-num">2</div>
-                    <div class="step-info">
-                        <h4>فحص وتشخيص</h4>
-                        <p>نفحص الجهاز بدقة، نحدد العطل أو نرشح لك الجهاز المناسب، ونوضح السعر كاملاً.</p>
-                    </div>
-                </div>
-
-                <div class="step-card">
-                    <div class="step-num">3</div>
-                    <div class="step-info">
-                        <h4>تسليم مضمون</h4>
-                        <p>إصلاح فوري أو تسليم الجهاز المطلوب مع الضمان الكامل.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- عملاؤنا يعودون إلينا دائماً -->
-        <div class="reviews-card">
-            <div class="stars-row">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-            </div>
-            <h3 class="reviews-title">عملاؤنا يعودون إلينا دائماً</h3>
-            <p class="reviews-desc">أكثر من 2000 عميل اختاروا برو ماكس لأجهزتهم وصيانتهم – والسبب بسيط: سعر واضح، عمل متقن، وضمان نحترمه.</p>
-
-            <div class="stats-badge-grid">
-                <div class="stat-box">
-                    <div class="stat-num">2000+</div>
-                    <div class="stat-lbl">عميل سعيد</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-num">%98</div>
-                    <div class="stat-lbl">نسبة رضا العملاء</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- قسم ساعات العمل والموقع -->
-        <div class="service-cards" style="margin-top: 10px;">
-            <div class="service-card">
-                <div class="service-card-right">
-                    <div class="service-icon"><i class="fa-solid fa-clock"></i></div>
-                    <div>
-                        <div class="service-title">ساعات العمل</div>
-                        <div class="service-desc">يومياً من 10 ص – 11 م</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <div class="service-card-right">
-                    <div class="service-icon"><i class="fa-solid fa-location-dot"></i></div>
-                    <div>
-                        <div class="service-title">الموقع</div>
-                        <div class="service-desc">حلب - اعزاز - خلف مشفى التوليد</div>
-                    </div>
-                </div>
-                <a href="#location-map" class="service-link">عرض الخريطة ←</a>
-            </div>
-        </div>
-
-        <!-- قسم الموقع على الخريطة -->
-        <div class="form-card" id="location-map">
-            <h3 class="form-title">موقعنا على الخريطة</h3>
-            <p class="form-subtitle">حلب - اعزاز - خلف مشفى التوليد</p>
-            <div style="border-radius: 14px; overflow: hidden; border: 1px solid var(--border-gold); margin-bottom: 14px;">
-                <iframe
-                    src="https://www.google.com/maps?q=%D8%AD%D9%84%D8%A8%20-%20%D8%A7%D8%B9%D8%B2%D8%A7%D8%B2%20-%20%D8%AE%D9%84%D9%81%20%D9%85%D8%B4%D9%81%D9%89%20%D8%A7%D9%84%D8%AA%D9%88%D9%84%D9%8A%D8%AF&output=embed"
-                    width="100%" height="200" style="border:0; display:block;" loading="lazy"></iframe>
-            </div>
-            <a href="https://www.google.com/maps/search/?api=1&query=%D8%AD%D9%84%D8%A8%20%D8%A7%D8%B9%D8%B2%D8%A7%D8%B2%20%D8%AE%D9%84%D9%81%20%D9%85%D8%B4%D9%81%D9%89%20%D8%A7%D9%84%D8%AA%D9%88%D9%84%D9%8A%D8%AF" target="_blank" class="btn-outline">
-                <i class="fa-solid fa-location-dot"></i> افتح في خرائط جوجل
-            </a>
-        </div>
-
-        <!-- قسم الأسئلة الشائعة -->
-        <div class="devices-section" id="faq">
-            <div class="section-header">
-                <div class="section-tag">الأسئلة الشائعة</div>
-                <h2 class="section-heading">كل ما تحتاج معرفته</h2>
-            </div>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-info">
-                        <h4>ما هي مدة الضمان على الأجهزة والصيانة؟</h4>
-                        <p>نوفر ضمانًا حقيقيًا على كل جهاز نبيعه وعلى كل عملية إصلاح نقوم بها، وتختلف المدة حسب نوع الجهاز أو الخدمة، ويتم توضيحها لك عند الشراء أو تسليم الطلب.</p>
-                    </div>
-                </div>
-                <div class="step-card">
-                    <div class="step-info">
-                        <h4>هل يمكن إرجاع أو استبدال الجهاز بعد الشراء؟</h4>
-                        <p>نعم، نوفر إمكانية استبدال الجهاز خلال 3 أيام من الشراء في حال وجود أي عيب أو مشكلة لم تُذكر عند البيع.</p>
-                    </div>
-                </div>
-                <div class="step-card">
-                    <div class="step-info">
-                        <h4>كم تستغرق عملية الصيانة عادة؟</h4>
-                        <p>معظم أعمال الصيانة تتم في نفس اليوم، ونحدد لك موعد التسليم بدقة بعد فحص الجهاز وتشخيص العطل.</p>
-                    </div>
-                </div>
-                <div class="step-card">
-                    <div class="step-info">
-                        <h4>هل الفحص والتشخيص مجاني؟</h4>
-                        <p>نعم، الفحص وتشخيص العطل مجاني تمامًا وبدون أي رسوم خفية قبل موافقتك على السعر.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- نموذج أرسل طلبك الآن (التكميلي) -->
-        <div class="form-card" id="order-form">
-            <h3 class="form-title">أرسل طلبك الآن</h3>
-            <p class="form-subtitle">املأ البيانات وستتواصل معك بعرض السعر المناسب.</p>
-
-            <div class="form-group">
-                <label class="form-label">الاسم الكامل</label>
-                <input type="text" class="form-input" placeholder="مثال: أحمد محمد">
-            </div>
-
-            <div class="form-group">
-                <label class="form-label">رقم الجوال</label>
-                <input type="tel" class="form-input" placeholder="+905314531305" dir="ltr">
-            </div>
-
-            <a href="https://wa.me/905314531305" target="_blank" class="btn-primary" style="margin-top: 14px;">
-                <i class="fa-brands fa-whatsapp"></i> إرسال الطلب
-            </a>
-        </div>
-
-        <!-- تذييل الموقع (Footer) الممتد -->
+        <!-- تذييل الموقع -->
         <div class="why-us-box" style="text-align: center; border-radius: 0;">
-            <div style="display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 1.3rem; font-weight: 900; color: #fff; margin-bottom: 10px;">
-                <div class="logo-icon" style="width: 36px; height: 36px; font-size: 1rem;"><i class="fa-solid fa-mobile-screen-button"></i></div>
-                برو<span>ماكس</span>
-            </div>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 16px;">
-                وجهتك الموثوقة للهواتف الذكية الجديدة والمستعملة، الإكسسوارات الأصلية، والصيانة السريعة بضمان حقيقي.
-            </p>
-            <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem; font-weight: 700; color: var(--gold-bright); margin-bottom: 20px;">
-                <span><i class="fa-solid fa-phone" style="color:var(--gold-primary); margin-left: 6px;"></i> <span dir="ltr">+905314531305</span></span>
-                <span><i class="fa-brands fa-whatsapp" style="color:#10b981; margin-left: 6px;"></i> تواصل عبر الواتساب</span>
-                <span><i class="fa-solid fa-clock" style="color:var(--gold-primary); margin-left: 6px;"></i> يومياً 10 ص – 11 م</span>
-            </div>
-
-            <!-- صفحات الموقع -->
-            <div style="border-top: 1px solid var(--border-gold); padding-top: 16px; margin-top: 16px;">
-                <h4 style="font-size: 0.95rem; font-weight: 800; color: #fff; margin-bottom: 10px;">صفحات الموقع</h4>
-                <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.82rem; color: var(--text-secondary);">
-                    <a href="#top" style="color: var(--text-secondary); text-decoration: none;">الرئيسية</a>
-                    <a href="#devices-gallery" style="color: var(--text-secondary); text-decoration: none;">الأجهزة (جديد ومستعمل)</a>
-                    <a href="#accessories-gallery" style="color: var(--text-secondary); text-decoration: none;">الإكسسوارات</a>
-                    <a href="#maintenance-gallery" style="color: var(--text-secondary); text-decoration: none;">الصيانة</a>
-                    <a href="https://wa.me/905314531305?text=مرحباً، أريد الاستفسار عن الخدمات المساعدة" target="_blank" style="color: var(--text-secondary); text-decoration: none;">الخدمات المساعدة</a>
-                    <a href="#why-us" style="color: var(--text-secondary); text-decoration: none;">من نحن</a>
-                </div>
-            </div>
-
-            <!-- المساعدة والدعم -->
-            <div style="border-top: 1px solid var(--border-gold); padding-top: 16px; margin-top: 16px;">
-                <h4 style="font-size: 0.95rem; font-weight: 800; color: #fff; margin-bottom: 10px;">المساعدة والدعم</h4>
-                <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.82rem; color: var(--text-secondary);">
-                    <a href="tel:+905314531305" style="color: var(--text-secondary); text-decoration: none;">اتصل بنا</a>
-                    <a href="#faq" style="color: var(--text-secondary); text-decoration: none;">الضمان والإرجاع</a>
-                    <a href="#faq" style="color: var(--text-secondary); text-decoration: none;">الأسئلة الشائعة</a>
-                </div>
-            </div>
-
-            <!-- صندوق المساعدة السريع بالأسفل -->
-            <div style="background: var(--bg-obsidian); border: 1px solid var(--border-gold); border-radius: 16px; padding: 18px; margin-top: 20px; text-align: center;">
-                <h4 style="font-size: 1rem; font-weight: 800; color: #fff; margin-bottom: 6px;">هل تحتاج مساعدة الآن؟</h4>
-                <p style="font-size: 0.76rem; color: var(--text-secondary); margin-bottom: 14px;">فريقنا جاهز للإجابة على أسئلتك وتقديم عرض سعر خلال ساعة.</p>
-                <a href="https://wa.me/905314531305" target="_blank" class="btn-primary" style="justify-content: center;">
-                    احصل على استشارة مجانية
-                </a>
-                <div style="font-size: 0.74rem; color: var(--text-secondary); margin-top: 10px;">
-                    <i class="fa-solid fa-location-dot" style="color: var(--gold-primary);"></i> تفاصيل العنوان والخريطة متوفرة في صفحة اتصل بنا
-                </div>
-            </div>
-
-            <div style="margin-top: 20px; font-size: 0.72rem; color: var(--text-secondary);">
+            <div style="font-size: 0.72rem; color: var(--text-secondary);">
                 © 2026 برو ماكس. جميع الحقوق محفوظة.
             </div>
         </div>
     </div>
 
+    <!-- نافذة تسجيل الدخول -->
+    <div id="loginModal" style="position: fixed; inset: 0; background: rgba(8,10,15,0.95); display: flex; align-items: center; justify-content: center; z-index: 9999;">
+        <div style="background: #121722; border: 1px solid rgba(212,175,55,0.35); padding: 25px; border-radius: 16px; width: 90%; max-width: 350px; text-align: center;">
+            <h3 style="color: #fff; margin-bottom: 15px;">تسجيل الدخول</h3>
+            <input type="text" id="username" placeholder="اسم المستخدم" style="width: 100%; padding: 10px; margin-bottom: 10px; background: #080a0f; border: 1px solid #444; color: #fff; border-radius: 8px;">
+            <input type="password" id="password" placeholder="كلمة المرور" style="width: 100%; padding: 10px; margin-bottom: 15px; background: #080a0f; border: 1px solid #444; color: #fff; border-radius: 8px;">
+            <button onclick="checkLogin()" style="width: 100%; padding: 12px; background: #d4af37; color: #080a0f; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">دخول</button>
+            <p id="loginError" style="color: #ef4444; font-size: 0.8rem; margin-top: 10px; display: none;">بيانات الدخول غير صحيحة!</p>
+        </div>
+    </div>
+
+    <script>
+        function checkLogin() {
+            const user = document.getElementById('username').value.trim();
+            const pass = document.getElementById('password').value.trim();
+            const errorMsg = document.getElementById('loginError');
+
+            // حساب المستخدم العادي
+            if (user === 'user' && pass === '1234') {
+                alert('مرحباً بك كـ "مستخدم عادي"');
+                document.getElementById('loginModal').style.display = 'none';
+            }
+            // حساب الأدمن
+            else if (user === 'mahmood' && pass === 'Mayatro') {
+                alert('مرحباً بك كـ "أدمن" (صلاحيات كاملة)');
+                document.getElementById('loginModal').style.display = 'none';
+            } else {
+                errorMsg.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
