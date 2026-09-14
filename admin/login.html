@@ -13,6 +13,7 @@
     <label>كلمة المرور:</label>
     <input type="password" id="password" required><br><br>
     
+    <!-- زر من نوع submit -->
     <button type="submit">دخول</button>
   </form>
 
@@ -21,11 +22,12 @@
     const validPass = "Maystro1";
 
     document.getElementById("loginForm").addEventListener("submit", function(e) {
-      e.preventDefault();
+      e.preventDefault(); // منع إعادة تحميل الصفحة
       const user = document.getElementById("username").value;
       const pass = document.getElementById("password").value;
       if(user === validUser && pass === validPass) {
-        window.location.href = "/admin/dashboard.html";
+        // تأكد أن الملف موجود في /admin
+        window.location.href = "dashboard.html";
       } else {
         alert("اسم المستخدم أو كلمة المرور غير صحيحة");
       }
