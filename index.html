@@ -853,7 +853,8 @@
 
         <!-- تذييل الموقع -->
         <div style="text-align: center; padding: 15px; border-top: 1px solid var(--border-gold); font-size: 0.72rem; color: var(--text-secondary);">
-            © 2026 برو ماكس | Pro Max - أعزاز. جميع الحقوق محفوظة. · الدعم: +905314531305
+            © 2026 برو ماكس | Pro Max - أعزاز. جميع الحقوق محفوظة. · الدعم: +905314531305<br>
+            <span style="display: inline-block; margin-top: 6px; color: var(--gold-bright);">تصميم وتطوير: <strong style="color: var(--gold-primary);">muhammad.r</strong></span>
         </div>
     </div>
 
@@ -864,8 +865,8 @@
             <h3 style="color: #fff; margin-bottom: 5px;">حساب المستخدم / الزائر</h3>
             <p style="color: var(--text-secondary); font-size: 0.75rem; margin-bottom: 15px;">يمكنك تسجيل الدخول بحسابك أو المتابعة كزائر</p>
             
-            <input type="text" id="usernameInput" placeholder="اسم المستخدم (muhamood alrahim أو muhammad rahim)" style="width: 100%; padding: 10px; margin-bottom: 10px; background: #080a0f; border: 1px solid #444; color: #fff; border-radius: 8px;">
-            <input type="password" id="passwordInput" placeholder="كلمة المرور" style="width: 100%; padding: 10px; margin-bottom: 15px; background: #080a0f; border: 1px solid #444; color: #fff; border-radius: 8px;">
+            <input type="text" id="usernameInput" placeholder="اسم المستخدم (mahmood)" style="width: 100%; padding: 10px; margin-bottom: 10px; background: #080a0f; border: 1px solid #444; color: #fff; border-radius: 8px;">
+            <input type="password" id="passwordInput" placeholder="كلمة المرور (maystro)" style="width: 100%; padding: 10px; margin-bottom: 15px; background: #080a0f; border: 1px solid #444; color: #fff; border-radius: 8px;">
             
             <button onclick="loginUser()" class="btn-primary" style="width: 100%; margin-bottom: 8px; padding: 10px;">تسجيل الدخول</button>
             <button onclick="loginAsGuest()" class="btn-outline" style="width: 100%; padding: 10px;">دخول كزائر</button>
@@ -892,7 +893,7 @@
             const pass = document.getElementById('passwordInput').value.trim();
             const errorMsg = document.getElementById('loginError');
 
-            if ((user.toLowerCase() === 'muhamood alrahim' || user.toLowerCase() === 'muhammad rahim') && pass !== '') {
+            if (user.toLowerCase() === 'mahmood' && pass === 'maystro') {
                 document.getElementById('currentUserBadge').innerText = user;
                 closeLoginModal();
                 alert('أهلاً بك يا ' + user);
