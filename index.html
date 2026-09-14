@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>برو ماكس | Pro Max - وكيلك المعتمد للهواتف والصيانة</title>
+    <title>برو ماكس | Pro Max - أعزاز | الهواتف، الكوبي، الإكسسوارات والصيانة</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
@@ -37,7 +37,7 @@
         }
 
         .page-container {
-            max-width: 480px;
+            max-width: 520px;
             margin: 0 auto;
             background: var(--bg-obsidian);
             min-height: 100vh;
@@ -52,7 +52,7 @@
             align-items: center;
             justify-content: space-between;
             padding: 14px 20px;
-            background: rgba(18, 23, 34, 0.85);
+            background: rgba(18, 23, 34, 0.9);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border-gold);
             position: sticky;
@@ -115,7 +115,7 @@
 
         /* القسم الرئيسي (الهيرو) */
         .hero-section {
-            padding: 30px 20px;
+            padding: 28px 18px;
             text-align: center;
         }
 
@@ -130,14 +130,14 @@
             font-weight: 700;
             padding: 6px 14px;
             border-radius: 50px;
-            margin-bottom: 18px;
+            margin-bottom: 14px;
         }
 
         .hero-title {
-            font-size: 1.7rem;
+            font-size: 1.6rem;
             font-weight: 900;
             line-height: 1.4;
-            margin-bottom: 14px;
+            margin-bottom: 12px;
             color: #fff;
         }
 
@@ -146,16 +146,16 @@
         }
 
         .hero-desc {
-            font-size: 0.88rem;
+            font-size: 0.85rem;
             color: var(--text-secondary);
-            margin-bottom: 22px;
+            margin-bottom: 18px;
         }
 
         .hero-features {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 8px;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
 
         .feature-pill {
@@ -163,7 +163,7 @@
             border: 1px solid var(--border-gold);
             border-radius: 12px;
             padding: 10px 6px;
-            font-size: 0.75rem;
+            font-size: 0.72rem;
             font-weight: 700;
             color: var(--gold-bright);
             display: flex;
@@ -217,55 +217,35 @@
             gap: 8px;
         }
 
-        .hero-note {
-            font-size: 0.75rem;
-            color: var(--text-secondary);
-            margin-bottom: 25px;
+        /* شريط التبويبات الفئوية السريعة */
+        .quick-nav-bar {
+            display: flex;
+            gap: 6px;
+            overflow-x: auto;
+            padding: 0 16px 14px;
+            scrollbar-width: none;
         }
 
-        /* إحصائيات سريعة */
-        .stats-bar {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            background: rgba(212, 175, 55, 0.08);
-            border-top: 1px solid var(--border-gold);
-            border-bottom: 1px solid var(--border-gold);
-            padding: 12px 16px;
-            margin-bottom: 25px;
+        .quick-nav-bar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .quick-nav-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            color: var(--gold-bright);
+            padding: 8px 14px;
+            border-radius: 20px;
             font-size: 0.78rem;
             font-weight: 700;
-            color: var(--gold-bright);
+            white-space: nowrap;
+            text-decoration: none;
         }
 
-        /* معرض الصور المصغرة للأعمال والصيانة */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-            padding: 0 16px;
-            margin-bottom: 25px;
-        }
-
-        .gallery-img {
-            height: 110px;
-            border-radius: 14px;
-            overflow: hidden;
-            border: 1px solid var(--border-gold);
-            position: relative;
-            background: var(--bg-card);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gold-primary);
-            font-size: 2rem;
-        }
-
-        /* قسم الخدمات */
+        /* عناوين الأقسام */
         .section-header {
             text-align: center;
-            margin-bottom: 18px;
-            padding: 0 16px;
+            margin: 20px 16px 12px;
         }
 
         .section-tag {
@@ -276,79 +256,18 @@
         }
 
         .section-heading {
-            font-size: 1.35rem;
+            font-size: 1.3rem;
             font-weight: 900;
             color: #fff;
         }
 
-        .service-cards {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-            padding: 0 16px;
-            margin-bottom: 28px;
-        }
-
-        .service-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-gold);
-            border-radius: 18px;
-            padding: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .service-card-right {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-
-        .service-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 14px;
-            background: linear-gradient(135deg, rgba(212,175,55,0.2), rgba(170,130,10,0.1));
-            border: 1px solid var(--border-gold);
-            color: var(--gold-bright);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-        }
-
-        .service-title {
-            font-size: 1rem;
-            font-weight: 800;
-            color: #fff;
-            margin-bottom: 4px;
-        }
-
-        .service-desc {
-            font-size: 0.76rem;
-            color: var(--text-secondary);
-        }
-
-        .service-link {
-            color: var(--gold-primary);
-            font-size: 0.82rem;
-            font-weight: 800;
-            text-decoration: none;
-            white-space: nowrap;
-        }
-
-        /* قسم معرض الأجهزة والإكسسوارات */
-        .devices-section {
-            padding: 0 16px;
-            margin-bottom: 28px;
-        }
-
+        /* شبكة المنتجات والأجهزة */
         .devices-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 12px;
-            margin-top: 14px;
+            padding: 0 16px;
+            margin-bottom: 22px;
         }
 
         .device-card {
@@ -358,11 +277,26 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
+            position: relative;
+        }
+
+        .card-badge-tag {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: rgba(8, 10, 15, 0.85);
+            border: 1px solid var(--border-gold);
+            color: var(--gold-bright);
+            font-size: 0.65rem;
+            font-weight: 800;
+            padding: 3px 8px;
+            border-radius: 8px;
+            z-index: 5;
         }
 
         .device-card-img {
             width: 100%;
-            height: 130px;
+            height: 135px;
             object-fit: cover;
             display: block;
             background: var(--bg-obsidian);
@@ -370,10 +304,14 @@
 
         .device-card-body {
             padding: 12px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: space-between;
         }
 
         .device-card-title {
-            font-size: 0.88rem;
+            font-size: 0.85rem;
             font-weight: 800;
             color: #fff;
             margin-bottom: 4px;
@@ -382,8 +320,16 @@
         .device-card-desc {
             font-size: 0.72rem;
             color: var(--text-secondary);
-            line-height: 1.5;
+            line-height: 1.45;
             margin-bottom: 8px;
+        }
+
+        .device-card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding-top: 8px;
         }
 
         .device-card-price {
@@ -392,60 +338,87 @@
             color: var(--gold-bright);
         }
 
-        /* لماذا برو ماكس */
-        .why-us-box {
-            background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-obsidian) 100%);
-            border-top: 1px solid var(--border-gold);
-            border-bottom: 1px solid var(--border-gold);
-            padding: 24px 16px;
-            margin-bottom: 25px;
+        .order-item-btn {
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid var(--border-gold);
+            color: var(--gold-bright);
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 8px;
+            cursor: pointer;
         }
 
-        .why-title {
-            font-size: 1.3rem;
-            font-weight: 900;
-            color: #fff;
-            margin-bottom: 8px;
-            text-align: center;
+        /* قسم الصيانة المباشرة */
+        .maintenance-box {
+            background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(16,185,129,0.08));
+            border: 1px solid var(--border-gold);
+            border-radius: 18px;
+            margin: 0 16px 24px;
+            padding: 18px;
         }
 
-        .why-subtitle {
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            text-align: center;
-            margin-bottom: 18px;
+        .maintenance-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 12px;
         }
 
-        .why-grid {
+        .maintenance-item {
+            background: var(--bg-card);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            border-radius: 12px;
+            padding: 12px;
             display: flex;
-            flex-direction: column;
+            align-items: center;
             gap: 10px;
         }
 
-        .why-item {
-            background: var(--bg-obsidian);
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            border-radius: 14px;
-            padding: 13px 14px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .why-item i {
+        .maintenance-item i {
             color: var(--gold-primary);
-            font-size: 1.1rem;
+            font-size: 1.15rem;
         }
 
-        .why-item-text h4 {
-            font-size: 0.9rem;
+        .maintenance-item h4 {
+            font-size: 0.8rem;
             font-weight: 800;
             color: #fff;
         }
 
-        .why-item-text p {
-            font-size: 0.74rem;
+        .maintenance-item p {
+            font-size: 0.68rem;
             color: var(--text-secondary);
+        }
+
+        /* قسم الموقع المباشر في أعزاز مع خريطة جوجل */
+        .location-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            border-radius: 18px;
+            margin: 0 16px 24px;
+            padding: 18px;
+        }
+
+        .location-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .location-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.82rem;
+            color: #fff;
+        }
+
+        .location-row i {
+            color: var(--gold-primary);
+            width: 20px;
+            text-align: center;
         }
 
         /* نموذج طلب الخدمة السريع */
@@ -453,7 +426,7 @@
             background: var(--bg-card);
             border: 1px solid var(--border-gold);
             border-radius: 20px;
-            padding: 22px 18px;
+            padding: 20px 18px;
             margin: 0 16px 28px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.5);
         }
@@ -486,17 +459,17 @@
 
         .device-types {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 6px;
         }
 
         .type-option {
             background: var(--bg-obsidian);
             border: 1px solid var(--border-gold);
             border-radius: 10px;
-            padding: 10px;
+            padding: 8px 4px;
             text-align: center;
-            font-size: 0.8rem;
+            font-size: 0.73rem;
             font-weight: 700;
             color: #fff;
             cursor: pointer;
@@ -525,7 +498,7 @@
             border-color: var(--gold-primary);
         }
 
-        /* نافذة تسجيل الدخول (اختيارية وغير إجبارية) */
+        /* نافذة تسجيل الدخول */
         #loginModal {
             position: fixed;
             inset: 0;
@@ -575,223 +548,312 @@
         <!-- الهيدر الرئيسي -->
         <section class="hero-section">
             <div class="badge-agent">
-                <i class="fa-solid fa-crown"></i> وكيلك المعتمد للهواتف والصيانة
+                <i class="fa-solid fa-crown"></i> وكيلك المعتمد للهواتف والصيانة في أعزاز
             </div>
             <h1 class="hero-title">
-                جهازك الجديد، أو إصلاحه في نفس اليوم<br>
-                <span>كل ما يحتاجه هاتفك... في مكان واحد</span>
+                أحدث الأجهزة، الكوبي الممتاز، الإكسسوارات<br>
+                <span>وصيانة فورية بضمان حقيقي</span>
             </h1>
             <p class="hero-desc">
-                في برو ماكس نوفر أحدث الهواتف الذكية الجديدة والمستعملة بحالة ممتازة، تشكيلة واسعة من الإكسسوارات الأصلية، وفريق صيانة متخصص يبدل الشاشات والبطاريات ويحل أعطال الشبكة والنظام بضمان حقيقي وسعر واضح من البداية.
+                متجر برو ماكس في أعزاز يوفر تشكيلة واسعة من الهواتف الجديدة، المستعملة، ونسخ الكوبي الفاخرة (بما فيها S26 Ultra نسخ 1 تيرا / 12 غيغا)، مع جميع الإكسسوارات الحديثة، وقسم صيانة مباشر بأعلى كفاءة.
             </p>
 
             <div class="hero-features">
                 <div class="feature-pill">
                     <i class="fa-solid fa-shield-halved"></i>
-                    <span>ضمان على كل جهاز</span>
+                    <span>ضمان حقيقي</span>
                 </div>
                 <div class="feature-pill">
-                    <i class="fa-solid fa-clock"></i>
-                    <span>صيانة في نفس اليوم</span>
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <span>صيانة فورية</span>
                 </div>
                 <div class="feature-pill">
-                    <i class="fa-solid fa-rotate"></i>
-                    <span>استبدال خلال 3 أيام</span>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>أعزاز - السنتر</span>
                 </div>
             </div>
 
             <div class="cta-buttons">
                 <a href="#request-form" class="btn-primary">
-                    <i class="fa-solid fa-arrow-left"></i> احصل على استشارة مجانية
+                    <i class="fa-solid fa-arrow-left"></i> اطلب جهازك أو صيانتك الآن
                 </a>
                 <a href="tel:+905314531305" class="btn-outline">
-                    <i class="fa-solid fa-phone"></i> اتصال مباشر بالدعم (+905314531305)
+                    <i class="fa-solid fa-phone"></i> اتصال مباشر: +905314531305
                 </a>
             </div>
-            <div class="hero-note">فحص مجاني وتشخيص للعطل قبل أي إصلاح · بدون أي رسوم خفية</div>
         </section>
 
-        <!-- شريط الثقة -->
-        <div class="stats-bar">
-            <span><i class="fa-solid fa-circle-check" style="color:var(--gold-primary)"></i> رد خلال ساعة</span>
-            <span><i class="fa-solid fa-star" style="color:var(--gold-primary)"></i> عملاء يثقون بنا يومياً</span>
+        <!-- شريط التبويبات السريعة -->
+        <div class="quick-nav-bar">
+            <a href="#original-devices" class="quick-nav-btn">أجهزة أصلية (جديد/مستعمل)</a>
+            <a href="#copy-devices" class="quick-nav-btn">أجهزة كوبي (Copy)</a>
+            <a href="#accessories-section" class="quick-nav-btn">الإكسسوارات الحديثة</a>
+            <a href="#maintenance-section" class="quick-nav-btn">الصيانة المباشرة</a>
+            <a href="#location-section" class="quick-nav-btn">الموقع المباشر</a>
         </div>
 
-        <!-- معرض صور توضيحي -->
-        <div class="gallery-grid">
-            <div class="gallery-img"><i class="fa-solid fa-mobile-screen"></i></div>
-            <div class="gallery-img"><i class="fa-solid fa-microchip"></i></div>
-            <div class="gallery-img"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-            <div class="gallery-img"><i class="fa-solid fa-battery-full"></i></div>
+        <!-- 1. قسم الأجهزة الأصلية (جديد ومستعمل) -->
+        <div class="section-header" id="original-devices">
+            <div class="section-tag">الأجهزة الأصلية</div>
+            <h2 class="section-heading">الهواتف الأصلية (جديد / مستعمل بحالة الزيروو)</h2>
+        </div>
+        <div class="devices-grid">
+            <div class="device-card">
+                <span class="card-badge-tag">أصلي - ضمان</span>
+                <img src="https://images.unsplash.com/photo-1632661674596-df8be070a5c5?w=500" alt="iPhone 13 Pro" class="device-card-img">
+                <div class="device-card-body">
+                    <div class="device-card-title">iPhone 13 Pro (أصلي)</div>
+                    <div class="device-card-desc">سعة 128GB - بطارية 100% - حالة ممتازة جداً مع كامل الملحقات.</div>
+                    <div class="device-card-footer">
+                        <span class="device-card-price">متوفر</span>
+                        <button class="order-item-btn" onclick="quickOrder('iPhone 13 Pro أصلي')">اطلب الآن</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="device-card">
+                <span class="card-badge-tag">أصلي - ضمان</span>
+                <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500" alt="Redmi 13" class="device-card-img">
+                <div class="device-card-body">
+                    <div class="device-card-title">Xiaomi Redmi 13 (أصلي)</div>
+                    <div class="device-card-desc">شاشة 90Hz - كاميرا 108MP - بطارية 5000mAh سريعة الشحن.</div>
+                    <div class="device-card-footer">
+                        <span class="device-card-price">متوفر</span>
+                        <button class="order-item-btn" onclick="quickOrder('Xiaomi Redmi 13 أصلي')">اطلب الآن</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!-- قسم الخدمات الرئيسية -->
-        <div class="section-header">
-            <div class="section-tag">خدماتنا</div>
-            <h2 class="section-heading">كل ما يحتاجه هاتفك تحت سقف واحد</h2>
+        <!-- 2. قسم أجهزة الكوبي (Copy / النسخ المطابقة) -->
+        <div class="section-header" id="copy-devices">
+            <div class="section-tag">فئة الكوبي سوبر ديلوكس</div>
+            <h2 class="section-heading">أجهزة الكوبي (Copy Grade A++)</h2>
+        </div>
+        <div class="devices-grid">
+            <div class="device-card">
+                <span class="card-badge-tag">1 تيرا | 12GB RAM</span>
+                <img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=500" alt="Samsung Galaxy S26 Ultra Copy" class="device-card-img">
+                <div class="device-card-body">
+                    <div class="device-card-title">Samsung Galaxy S26 Ultra (كوبي 1TB / 12GB)</div>
+                    <div class="device-card-desc">ذاكرة تخزين 1 تيرا - رام 12 غيغا بايت - تصميم مطابق للأصلي 1:1 مع واجهة ممتازة.</div>
+                    <div class="device-card-footer">
+                        <span class="device-card-price">سعر مميز</span>
+                        <button class="order-item-btn" onclick="quickOrder('Samsung Galaxy S26 Ultra كوبي 1 تيرا / 12 غيغا')">اطلب الآن</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="device-card">
+                <span class="card-badge-tag">سوبر كوبي</span>
+                <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=500" alt="iPhone 15 Pro Max Copy" class="device-card-img">
+                <div class="device-card-body">
+                    <div class="device-card-title">iPhone 15 Pro Max (كوبي مطابق 1:1)</div>
+                    <div class="device-card-desc">نظام تشغيل شبيه بالكامل، هيكل تيتانيوم مطابق للأصلي في الوزن والشكل والملمس.</div>
+                    <div class="device-card-footer">
+                        <span class="device-card-price">سعر مميز</span>
+                        <button class="order-item-btn" onclick="quickOrder('iPhone 15 Pro Max كوبي 1:1')">اطلب الآن</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="service-cards">
-            <div class="service-card">
-                <div class="service-card-right">
-                    <div class="service-icon"><i class="fa-solid fa-mobile"></i></div>
+        <!-- 3. قسم الإكسسوارات الحديثة بالكامل -->
+        <div class="section-header" id="accessories-section">
+            <div class="section-tag">الملحقات والإكسسوارات</div>
+            <h2 class="section-heading">أحدث الإكسسوارات والشواحن الأصلية</h2>
+        </div>
+        <div class="devices-grid">
+            <div class="device-card">
+                <span class="card-badge-tag">أصلي PD</span>
+                <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=500" alt="شواحن جدارية سريعة" class="device-card-img">
+                <div class="device-card-body">
+                    <div class="device-card-title">شواحن جدارية سريعة (PD / GaN)</div>
+                    <div class="device-card-desc">شواحن 20W - 65W مع كابلات تايب سي أصلية معتمدة لحماية البطارية.</div>
+                    <div class="device-card-footer">
+                        <span class="device-card-price">متوفر</span>
+                        <button class="order-item-btn" onclick="quickOrder('شاحن جداري سريع GaN')">اطلب الآن</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="device-card">
+                <span class="card-badge-tag">صوت نقي</span>
+                <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500" alt="سماعات لاسلكية" class="device-card-img">
+                <div class="device-card-body">
+                    <div class="device-card-title">سماعات لاسلكية (AirPods / TWS)</div>
+                    <div class="device-card-desc">سماعات بلوتوث بنقاء صوت عالي وعزل ضوضاء ANC وبطارية طويلة.</div>
+                    <div class="device-card-footer">
+                        <span class="device-card-price">متوفر</span>
+                        <button class="order-item-btn" onclick="quickOrder('سماعات لاسلكية TWS')">اطلب الآن</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="device-card">
+                <span class="card-badge-tag">حماية</span>
+                <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=500" alt="واقيات شاشة نانو" class="device-card-img">
+                <div class="device-card-body">
+                    <div class="device-card-title">واقيات شاشة (نانو سيراميك / حراري)</div>
+                    <div class="device-card-desc">حماية شاملة ضد الكسر والخدوش مع تركيب احترافي مجاني بالمحل.</div>
+                    <div class="device-card-footer">
+                        <span class="device-card-price">متوفر</span>
+                        <button class="order-item-btn" onclick="quickOrder('واقي شاشة نانو سيراميك')">اطلب الآن</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="device-card">
+                <span class="card-badge-tag">طاقة متنقلة</span>
+                <img src="https://images.unsplash.com/photo-1609592235391-d49e102f9e4f?w=500" alt="باور بانك" class="device-card-img">
+                <div class="device-card-body">
+                    <div class="device-card-title">باور بانك (10,000 / 20,000 mAh)</div>
+                    <div class="device-card-desc">شحن سريع MagSafe أو عبر المنافذ المتعددة بتصميم أنيق وصغير.</div>
+                    <div class="device-card-footer">
+                        <span class="device-card-price">متوفر</span>
+                        <button class="order-item-btn" onclick="quickOrder('باور بانك سريع')">اطلب الآن</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="device-card">
+                <span class="card-badge-tag">ساعات ذكية</span>
+                <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=500" alt="ساعات ذكية" class="device-card-img">
+                <div class="device-card-body">
+                    <div class="device-card-title">ساعات ذكية Ultra / Smartwatch</div>
+                    <div class="device-card-desc">مراقبة نبض القلب، مكالمات بلوتوث، وشاشات AMOLED عالية الدقة.</div>
+                    <div class="device-card-footer">
+                        <span class="device-card-price">متوفر</span>
+                        <button class="order-item-btn" onclick="quickOrder('ساعة ذكية Ultra')">اطلب الآن</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="device-card">
+                <span class="card-badge-tag">كفرات وأغطية</span>
+                <img src="https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=500" alt="كفرات حماية" class="device-card-img">
+                <div class="device-card-body">
+                    <div class="device-card-title">كفرات حماية فاخرة & MagSafe</div>
+                    <div class="device-card-desc">تشكيلة واسعة من الكفرات المضادة للصدمات وكفرات الماغسيف.</div>
+                    <div class="device-card-footer">
+                        <span class="device-card-price">متوفر</span>
+                        <button class="order-item-btn" onclick="quickOrder('كفر حماية MagSafe')">اطلب الآن</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. قسم الصيانة المباشرة -->
+        <div class="maintenance-box" id="maintenance-section">
+            <div class="section-tag" style="text-align: center;">خدمات الصيانة</div>
+            <h3 class="why-title" style="color: #fff; font-size: 1.2rem; text-align: center;">قسم الصيانة المباشرة (فحص فوري في نفس اليوم)</h3>
+            <p style="color: var(--text-secondary); font-size: 0.78rem; text-align: center; margin-bottom: 8px;">فريق تقني متخصص بتبديل القطع وحل كافة أعطال الهواتف</p>
+
+            <div class="maintenance-list">
+                <div class="maintenance-item">
+                    <i class="fa-solid fa-mobile-screen"></i>
                     <div>
-                        <div class="service-title">بيع الأجهزة (جديد ومستعمل)</div>
-                        <div class="service-desc">أحدث إصدارات الهواتف الذكية الجديدة والمستعملة بحالة ممتازة، مفحوصة بالكامل مع ضمان.</div>
+                        <h4>تبديل شاشات</h4>
+                        <p>أصلية ووكالة مع الضمان</p>
                     </div>
                 </div>
-                <a href="#devices-gallery" class="service-link">تصفح الأجهزة ←</a>
-            </div>
-
-            <div class="service-card">
-                <div class="service-card-right">
-                    <div class="service-icon"><i class="fa-solid fa-headphones"></i></div>
+                <div class="maintenance-item">
+                    <i class="fa-solid fa-battery-bolt"></i>
                     <div>
-                        <div class="service-title">الإكسسوارات الأصلية</div>
-                        <div class="service-desc">شواحن أصلية، سماعات لاسلكية، واقيات شاشة، وكل أنواع الأغطية والكفرات.</div>
+                        <h4>تبديل بطاريات</h4>
+                        <p>بطاريات عالية الكفاءة</p>
                     </div>
                 </div>
-                <a href="#accessories-gallery" class="service-link">تصفح الإكسسوارات ←</a>
-            </div>
-
-            <div class="service-card">
-                <div class="service-card-right">
-                    <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-                    <div>
-                        <div class="service-title">الصيانة السريعة</div>
-                        <div class="service-desc">تبديل الشاشات والبطاريات، إصلاح الأعطال الفنية، وحل مشاكل الشبكة والنظام.</div>
-                    </div>
-                </div>
-                <a href="tel:+905314531305" class="service-link">اتصل بالصيانة ←</a>
-            </div>
-        </div>
-
-        <!-- قسم معرض الأجهزة -->
-        <div class="devices-section" id="devices-gallery">
-            <div class="section-header">
-                <div class="section-tag">أجهزتنا</div>
-                <h2 class="section-heading">تصفح الأجهزة المتوفرة</h2>
-            </div>
-
-            <div class="devices-grid">
-                <div class="device-card">
-                    <img src="https://images.unsplash.com/photo-1632661674596-df8be070a5c5?w=500" alt="iPhone 13 Pro" class="device-card-img">
-                    <div class="device-card-body">
-                        <div class="device-card-title">iPhone 13 Pro</div>
-                        <div class="device-card-desc">شاشة Super Retina XDR - معالج A15 Bionic - كاميرا ثلاثية 12MP. البطارية: 100%</div>
-                        <div class="device-card-price">متوفر</div>
-                    </div>
-                </div>
-                <div class="device-card">
-                    <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500" alt="Redmi 13" class="device-card-img">
-                    <div class="device-card-body">
-                        <div class="device-card-title">Redmi 13</div>
-                        <div class="device-card-desc">شاشة كبيرة ومعالج موفر للطاقة وبطارية عالية السعة. نظافة 100%</div>
-                        <div class="device-card-price">متوفر</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- قسم معرض الإكسسوارات -->
-        <div class="devices-section" id="accessories-gallery">
-            <div class="section-header">
-                <div class="section-tag">إكسسواراتنا</div>
-                <h2 class="section-heading">تصفح الإكسسوارات المتوفرة</h2>
-            </div>
-
-            <div class="devices-grid">
-                <div class="device-card">
-                    <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=500" alt="شواحن جدارية سريعة" class="device-card-img">
-                    <div class="device-card-body">
-                        <div class="device-card-title">شواحن جدارية سريعة (PD / GaN)</div>
-                        <div class="device-card-desc">شواحن بتقنية حديثة وعالية القدرة لحماية البطارية وتسريع الشحن.</div>
-                        <div class="device-card-price">متوفر</div>
-                    </div>
-                </div>
-                <div class="device-card">
-                    <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500" alt="سماعات لاسلكية" class="device-card-img">
-                    <div class="device-card-body">
-                        <div class="device-card-title">سماعات لاسلكية (TWS)</div>
-                        <div class="device-card-desc">سماعات بتصميم عصري وصوت نقي مع بطارية تدوم طويلاً.</div>
-                        <div class="device-card-price">متوفر</div>
-                    </div>
-                </div>
-                <div class="device-card">
-                    <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=500" alt="واقيات شاشة نانو" class="device-card-img">
-                    <div class="device-card-body">
-                        <div class="device-card-title">واقيات شاشة نانو وحراري</div>
-                        <div class="device-card-desc">طبقات حماية فائقة النحافة تحافظ على حساسية اللمس والخدوش.</div>
-                        <div class="device-card-price">متوفر</div>
-                    </div>
-                </div>
-                <div class="device-card">
-                    <img src="https://images.unsplash.com/photo-1609592235391-d49e102f9e4f?w=500" alt="باور بانك" class="device-card-img">
-                    <div class="device-card-body">
-                        <div class="device-card-title">باور بانك سريع (10k / 20k mAh)</div>
-                        <div class="device-card-desc">بطاريات متنقلة بسعات عالية ومنافذ متعددة للشحن السريع.</div>
-                        <div class="device-card-price">متوفر</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- لماذا برو ماكس -->
-        <div class="why-us-box" id="why-us">
-            <h3 class="why-title">لماذا برو ماكس؟</h3>
-            <p class="why-subtitle">نُصلح باحتراف، ونبيع بضمير</p>
-            <div class="why-grid">
-                <div class="why-item">
-                    <i class="fa-solid fa-shield-halved"></i>
-                    <div class="why-item-text">
-                        <h4>ضمان حقيقي</h4>
-                        <p>ضمان على الأجهزة المباعة وعلى كل عملية إصلاح نقوم بها.</p>
-                    </div>
-                </div>
-                <div class="why-item">
+                <div class="maintenance-item">
                     <i class="fa-solid fa-microchip"></i>
-                    <div class="why-item-text">
-                        <h4>قطع أصلية</h4>
-                        <p>نستخدم قطع غيار وإكسسوارات أصلية مفحوصة لضمان الأداء.</p>
+                    <div>
+                        <h4>إصلاح البورد / IC</h4>
+                        <p>حل أعطال الشحن والشبكة</p>
                     </div>
+                </div>
+                <div class="maintenance-item">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <div>
+                        <h4>حل مشاكل السوفتوير</h4>
+                        <p>فك وتفليش واستعادة بيانات</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. قسم الموقع المباشر مع خريطة جوجل -->
+        <div class="location-card" id="location-section">
+            <div class="section-tag">العنوان والموقع</div>
+            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 800; margin-bottom: 4px;">الموقع المباشر لمحل برو ماكس</h3>
+            <p style="color: var(--text-secondary); font-size: 0.76rem;">زورنا في مركز المدينة لخدمتكم بشكل مباشر</p>
+
+            <div class="location-info">
+                <!-- خريطة جوجل المدمجة لمنطقة أعزاز -->
+                <div style="width: 100%; height: 180px; border-radius: 12px; overflow: hidden; margin: 10px 0; border: 1px solid var(--border-gold);">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51655.61793740263!2d37.0097727!3d36.5866164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1525e98a3c00f7ad%3A0xc3c51ee601f78684!2z2KfZhNmF2LHYp9mG2Iwg2LHQsNC32LTZgA!5e0!3m2!1sar!2s!4v1700000000000!5m2!1sar!2s" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+                <div class="location-row">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span><strong>المدينة:</strong> سوريا - أعزاز - السوق الرئيسي</span>
+                </div>
+                <div class="location-row">
+                    <i class="fa-solid fa-clock"></i>
+                    <span><strong>أوقات العمل:</strong> يومياً من 9:00 صباحاً حتى 10:00 مساءً</span>
+                </div>
+                <div class="location-row">
+                    <i class="fa-solid fa-phone"></i>
+                    <span><strong>رقم التواصل المباشر:</strong> +905314531305</span>
+                </div>
+                <div style="margin-top: 8px;">
+                    <a href="https://maps.app.goo.gl/AZAZ_LINK_HERE" target="_blank" class="btn-primary" style="padding: 10px; font-size: 0.85rem; text-align: center;">
+                        <i class="fa-solid fa-map-location-dot"></i> فتح الموقع عبر تطبيق خرائط جوجل
+                    </a>
                 </div>
             </div>
         </div>
 
         <!-- نموذج اطلب خدمتك الآن -->
         <div class="form-card" id="request-form">
-            <h3 class="form-title">اطلب خدمتك الآن</h3>
-            <p class="form-subtitle">أخبرنا بما تحتاجه ونتواصل معك بسرعة</p>
+            <h3 class="form-title">اطلب خدمتك أو حجز منتج الآن</h3>
+            <p class="form-subtitle">أخبرنا بما تحتاجه وسيتواصل معك الفريق فوراً عبر واتساب</p>
 
             <div class="form-group">
-                <label class="form-label">نوع الجهاز</label>
+                <label class="form-label">نوع الطلب</label>
                 <div class="device-types">
-                    <div class="type-option active" onclick="selectDeviceType(this)">هاتف</div>
-                    <div class="type-option" onclick="selectDeviceType(this)">تابلت</div>
+                    <div class="type-option active" onclick="selectDeviceType(this)">هاتف أصلي</div>
+                    <div class="type-option" onclick="selectDeviceType(this)">جهاز كوبي</div>
                     <div class="type-option" onclick="selectDeviceType(this)">إكسسوار</div>
+                    <div class="type-option" onclick="selectDeviceType(this)">صيانة</div>
                 </div>
             </div>
 
             <div class="form-group">
-                <label class="form-label">الماركة</label>
-                <input type="text" id="brandInput" class="form-input" placeholder="اختر الماركة (آيفون، سامسونج...)">
+                <label class="form-label">اسم الجهاز / القطعة / العطل</label>
+                <input type="text" id="brandInput" class="form-input" placeholder="مثال: S26 Ultra كوبي 1 تيرا، تبديل شاشة...">
             </div>
 
             <div class="form-group">
-                <label class="form-label">المشكلة أو الطلب</label>
-                <textarea id="descInput" class="form-textarea" rows="3" placeholder="مثال: الشاشة مكسورة، أحتاج شاحن أصلي، أبحث عن جهاز مستعمل..."></textarea>
+                <label class="form-label">ملاحظات إضافية</label>
+                <textarea id="descInput" class="form-textarea" rows="3" placeholder="اكتب أي تفاصيل إضافية هنا..."></textarea>
             </div>
 
-            <button type="button" onclick="sendToWhatsApp()" class="btn-primary" style="width: 100%; margin-top: 10px;">
+            <button type="button" onclick="sendToWhatsApp()" class="btn-primary" style="width: 100%; margin-top: 6px;">
                 <i class="fa-brands fa-whatsapp"></i> إرسال الطلب عبر واتساب
             </button>
         </div>
 
         <!-- تذييل الموقع -->
-        <div class="why-us-box" style="text-align: center; border-radius: 0;">
-            <div style="font-size: 0.72rem; color: var(--text-secondary);">
-                © 2026 برو ماكس (أعزاز). جميع الحقوق محفوظة. · الدعم: +905314531305
-            </div>
+        <div style="text-align: center; padding: 15px; border-top: 1px solid var(--border-gold); font-size: 0.72rem; color: var(--text-secondary);">
+            © 2026 برو ماكس | Pro Max - أعزاز. جميع الحقوق محفوظة. · الدعم: +905314531305
         </div>
     </div>
 
@@ -800,9 +862,9 @@
         <div class="modal-box">
             <button class="close-modal" onclick="closeLoginModal()"><i class="fa-solid fa-xmark"></i></button>
             <h3 style="color: #fff; margin-bottom: 5px;">حساب المستخدم / الزائر</h3>
-            <p style="color: var(--text-secondary); font-size: 0.75rem; margin-bottom: 15px;">يمكنك تسجيل الدخول أو المتابعة كزائر</p>
+            <p style="color: var(--text-secondary); font-size: 0.75rem; margin-bottom: 15px;">يمكنك تسجيل الدخول بحسابك أو المتابعة كزائر</p>
             
-            <input type="text" id="usernameInput" placeholder="اسم المستخدم (muhamood alrahim)" style="width: 100%; padding: 10px; margin-bottom: 10px; background: #080a0f; border: 1px solid #444; color: #fff; border-radius: 8px;">
+            <input type="text" id="usernameInput" placeholder="اسم المستخدم (muhamood alrahim أو muhammad rahim)" style="width: 100%; padding: 10px; margin-bottom: 10px; background: #080a0f; border: 1px solid #444; color: #fff; border-radius: 8px;">
             <input type="password" id="passwordInput" placeholder="كلمة المرور" style="width: 100%; padding: 10px; margin-bottom: 15px; background: #080a0f; border: 1px solid #444; color: #fff; border-radius: 8px;">
             
             <button onclick="loginUser()" class="btn-primary" style="width: 100%; margin-bottom: 8px; padding: 10px;">تسجيل الدخول</button>
@@ -844,12 +906,17 @@
             closeLoginModal();
         }
 
+        function quickOrder(itemName) {
+            const text = `مرحباً برو ماكس، أرغب بالاستفسار / طلب المنتج التالي: ${itemName}`;
+            window.open(`https://wa.me/905314531305?text=${encodeURIComponent(text)}`, '_blank');
+        }
+
         function sendToWhatsApp() {
             const activeTypeElement = document.querySelector('.type-option.active');
-            const activeType = activeTypeElement ? activeTypeElement.innerText : 'هاتف';
+            const activeType = activeTypeElement ? activeTypeElement.innerText : 'هاتف أصلي';
             const brand = document.getElementById('brandInput').value;
             const desc = document.getElementById('descInput').value;
-            const text = `مرحباً برو ماكس، أرغب بطلب:\n- نوع الجهاز: ${activeType}\n- الماركة: ${brand}\n- التفاصيل: ${desc}`;
+            const text = `مرحباً برو ماكس، أرغب بطلب:\n- التصنيف: ${activeType}\n- التفاصيل/الجهاز: ${brand}\n- ملاحظات: ${desc}`;
             window.open(`https://wa.me/905314531305?text=${encodeURIComponent(text)}`, '_blank');
         }
     </script>
