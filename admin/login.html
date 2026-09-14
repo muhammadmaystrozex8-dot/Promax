@@ -1,1 +1,35 @@
-window.location.href
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تسجيل الدخول</title>
+</head>
+<body>
+  <h2>تسجيل الدخول للوحة التحكم</h2>
+  <form id="loginForm">
+    <label>اسم المستخدم:</label>
+    <input type="text" id="username" required><br><br>
+    
+    <label>كلمة المرور:</label>
+    <input type="password" id="password" required><br><br>
+    
+    <button type="submit">دخول</button>
+  </form>
+
+  <script>
+    const validUser = "Mahmood rahim";
+    const validPass = "Maystro1";
+
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+      if(user === validUser && pass === validPass) {
+        window.location.href = "/admin/dashboard.html";
+      } else {
+        alert("اسم المستخدم أو كلمة المرور غير صحيحة");
+      }
+    });
+  </script>
+</body>
+</html>
