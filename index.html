@@ -223,83 +223,6 @@
             margin-bottom: 25px;
         }
 
-        /* نموذج طلب الخدمة السريع */
-        .form-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-gold);
-            border-radius: 20px;
-            padding: 22px 18px;
-            margin: 0 16px 28px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-        }
-
-        .form-title {
-            font-size: 1.15rem;
-            font-weight: 800;
-            margin-bottom: 4px;
-            color: #fff;
-        }
-
-        .form-subtitle {
-            font-size: 0.78rem;
-            color: var(--text-secondary);
-            margin-bottom: 16px;
-        }
-
-        .form-group {
-            margin-bottom: 14px;
-            text-align: right;
-        }
-
-        .form-label {
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: var(--gold-bright);
-            margin-bottom: 8px;
-            display: block;
-        }
-
-        .device-types {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
-        }
-
-        .type-option {
-            background: var(--bg-obsidian);
-            border: 1px solid var(--border-gold);
-            border-radius: 10px;
-            padding: 10px;
-            text-align: center;
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: #fff;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        .type-option.active {
-            background: var(--gold-primary);
-            color: #080a0f;
-            border-color: var(--gold-primary);
-        }
-
-        .form-input, .form-textarea {
-            width: 100%;
-            background: var(--bg-obsidian);
-            border: 1px solid rgba(255,255,255,0.12);
-            border-radius: 10px;
-            padding: 12px;
-            color: #fff;
-            font-size: 0.85rem;
-            outline: none;
-            font-family: 'Cairo', sans-serif;
-        }
-
-        .form-input:focus, .form-textarea:focus {
-            border-color: var(--gold-primary);
-        }
-
         /* إحصائيات سريعة */
         .stats-bar {
             display: flex;
@@ -415,6 +338,60 @@
             white-space: nowrap;
         }
 
+        /* قسم معرض الأجهزة والإكسسوارات */
+        .devices-section {
+            padding: 0 16px;
+            margin-bottom: 28px;
+        }
+
+        .devices-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 14px;
+        }
+
+        .device-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .device-card-img {
+            width: 100%;
+            height: 130px;
+            object-fit: cover;
+            display: block;
+            background: var(--bg-obsidian);
+        }
+
+        .device-card-body {
+            padding: 12px;
+        }
+
+        .device-card-title {
+            font-size: 0.88rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+
+        .device-card-desc {
+            font-size: 0.72rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+
+        .device-card-price {
+            font-size: 0.82rem;
+            font-weight: 800;
+            color: var(--gold-bright);
+        }
+
         /* لماذا برو ماكس */
         .why-us-box {
             background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-obsidian) 100%);
@@ -471,7 +448,84 @@
             color: var(--text-secondary);
         }
 
-        /* نافذة تسجيل الدخول (غير إجبارية) */
+        /* نموذج طلب الخدمة السريع */
+        .form-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            border-radius: 20px;
+            padding: 22px 18px;
+            margin: 0 16px 28px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+
+        .form-title {
+            font-size: 1.15rem;
+            font-weight: 800;
+            margin-bottom: 4px;
+            color: #fff;
+        }
+
+        .form-subtitle {
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 14px;
+            text-align: right;
+        }
+
+        .form-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--gold-bright);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .device-types {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+
+        .type-option {
+            background: var(--bg-obsidian);
+            border: 1px solid var(--border-gold);
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .type-option.active {
+            background: var(--gold-primary);
+            color: #080a0f;
+            border-color: var(--gold-primary);
+        }
+
+        .form-input, .form-textarea {
+            width: 100%;
+            background: var(--bg-obsidian);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 10px;
+            padding: 12px;
+            color: #fff;
+            font-size: 0.85rem;
+            outline: none;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            border-color: var(--gold-primary);
+        }
+
+        /* نافذة تسجيل الدخول (اختيارية وغير إجبارية) */
         #loginModal {
             position: fixed;
             inset: 0;
@@ -586,7 +640,7 @@
                         <div class="service-desc">أحدث إصدارات الهواتف الذكية الجديدة والمستعملة بحالة ممتازة، مفحوصة بالكامل مع ضمان.</div>
                     </div>
                 </div>
-                <a href="#request-form" class="service-link">اطلب الآن ←</a>
+                <a href="#devices-gallery" class="service-link">تصفح الأجهزة ←</a>
             </div>
 
             <div class="service-card">
@@ -597,7 +651,7 @@
                         <div class="service-desc">شواحن أصلية، سماعات لاسلكية، واقيات شاشة، وكل أنواع الأغطية والكفرات.</div>
                     </div>
                 </div>
-                <a href="#request-form" class="service-link">اطلب الآن ←</a>
+                <a href="#accessories-gallery" class="service-link">تصفح الإكسسوارات ←</a>
             </div>
 
             <div class="service-card">
@@ -609,6 +663,76 @@
                     </div>
                 </div>
                 <a href="tel:+905314531305" class="service-link">اتصل بالصيانة ←</a>
+            </div>
+        </div>
+
+        <!-- قسم معرض الأجهزة -->
+        <div class="devices-section" id="devices-gallery">
+            <div class="section-header">
+                <div class="section-tag">أجهزتنا</div>
+                <h2 class="section-heading">تصفح الأجهزة المتوفرة</h2>
+            </div>
+
+            <div class="devices-grid">
+                <div class="device-card">
+                    <img src="https://images.unsplash.com/photo-1632661674596-df8be070a5c5?w=500" alt="iPhone 13 Pro" class="device-card-img">
+                    <div class="device-card-body">
+                        <div class="device-card-title">iPhone 13 Pro</div>
+                        <div class="device-card-desc">شاشة Super Retina XDR - معالج A15 Bionic - كاميرا ثلاثية 12MP. البطارية: 100%</div>
+                        <div class="device-card-price">متوفر</div>
+                    </div>
+                </div>
+                <div class="device-card">
+                    <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500" alt="Redmi 13" class="device-card-img">
+                    <div class="device-card-body">
+                        <div class="device-card-title">Redmi 13</div>
+                        <div class="device-card-desc">شاشة كبيرة ومعالج موفر للطاقة وبطارية عالية السعة. نظافة 100%</div>
+                        <div class="device-card-price">متوفر</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- قسم معرض الإكسسوارات -->
+        <div class="devices-section" id="accessories-gallery">
+            <div class="section-header">
+                <div class="section-tag">إكسسواراتنا</div>
+                <h2 class="section-heading">تصفح الإكسسوارات المتوفرة</h2>
+            </div>
+
+            <div class="devices-grid">
+                <div class="device-card">
+                    <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=500" alt="شواحن جدارية سريعة" class="device-card-img">
+                    <div class="device-card-body">
+                        <div class="device-card-title">شواحن جدارية سريعة (PD / GaN)</div>
+                        <div class="device-card-desc">شواحن بتقنية حديثة وعالية القدرة لحماية البطارية وتسريع الشحن.</div>
+                        <div class="device-card-price">متوفر</div>
+                    </div>
+                </div>
+                <div class="device-card">
+                    <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500" alt="سماعات لاسلكية" class="device-card-img">
+                    <div class="device-card-body">
+                        <div class="device-card-title">سماعات لاسلكية (TWS)</div>
+                        <div class="device-card-desc">سماعات بتصميم عصري وصوت نقي مع بطارية تدوم طويلاً.</div>
+                        <div class="device-card-price">متوفر</div>
+                    </div>
+                </div>
+                <div class="device-card">
+                    <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=500" alt="واقيات شاشة نانو" class="device-card-img">
+                    <div class="device-card-body">
+                        <div class="device-card-title">واقيات شاشة نانو وحراري</div>
+                        <div class="device-card-desc">طبقات حماية فائقة النحافة تحافظ على حساسية اللمس والخدوش.</div>
+                        <div class="device-card-price">متوفر</div>
+                    </div>
+                </div>
+                <div class="device-card">
+                    <img src="https://images.unsplash.com/photo-1609592235391-d49e102f9e4f?w=500" alt="باور بانك" class="device-card-img">
+                    <div class="device-card-body">
+                        <div class="device-card-title">باور بانك سريع (10k / 20k mAh)</div>
+                        <div class="device-card-desc">بطاريات متنقلة بسعات عالية ومنافذ متعددة للشحن السريع.</div>
+                        <div class="device-card-price">متوفر</div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -666,7 +790,7 @@
         <!-- تذييل الموقع -->
         <div class="why-us-box" style="text-align: center; border-radius: 0;">
             <div style="font-size: 0.72rem; color: var(--text-secondary);">
-                © 2026 برو ماكس. جميع الحقوق محفوظة. · الدعم: +905314531305
+                © 2026 برو ماكس (أعزاز). جميع الحقوق محفوظة. · الدعم: +905314531305
             </div>
         </div>
     </div>
@@ -678,7 +802,7 @@
             <h3 style="color: #fff; margin-bottom: 5px;">حساب المستخدم / الزائر</h3>
             <p style="color: var(--text-secondary); font-size: 0.75rem; margin-bottom: 15px;">يمكنك تسجيل الدخول أو المتابعة كزائر</p>
             
-            <input type="text" id="usernameInput" placeholder="اسم المستخدم (مثل: muhamood alrahim)" style="width: 100%; padding: 10px; margin-bottom: 10px; background: #080a0f; border: 1px solid #444; color: #fff; border-radius: 8px;">
+            <input type="text" id="usernameInput" placeholder="اسم المستخدم (muhamood alrahim)" style="width: 100%; padding: 10px; margin-bottom: 10px; background: #080a0f; border: 1px solid #444; color: #fff; border-radius: 8px;">
             <input type="password" id="passwordInput" placeholder="كلمة المرور" style="width: 100%; padding: 10px; margin-bottom: 15px; background: #080a0f; border: 1px solid #444; color: #fff; border-radius: 8px;">
             
             <button onclick="loginUser()" class="btn-primary" style="width: 100%; margin-bottom: 8px; padding: 10px;">تسجيل الدخول</button>
@@ -706,8 +830,7 @@
             const pass = document.getElementById('passwordInput').value.trim();
             const errorMsg = document.getElementById('loginError');
 
-            // يمكنك تعديل اسم المستخدم وكلمة المرور حسب رغبتك هنا
-            if ((user.toLowerCase() === 'muhamood alrahim' || user === 'user') && pass !== '') {
+            if ((user.toLowerCase() === 'muhamood alrahim' || user.toLowerCase() === 'muhammad rahim') && pass !== '') {
                 document.getElementById('currentUserBadge').innerText = user;
                 closeLoginModal();
                 alert('أهلاً بك يا ' + user);
@@ -722,7 +845,8 @@
         }
 
         function sendToWhatsApp() {
-            const activeType = document.querySelector('.type-option.active').innerText;
+            const activeTypeElement = document.querySelector('.type-option.active');
+            const activeType = activeTypeElement ? activeTypeElement.innerText : 'هاتف';
             const brand = document.getElementById('brandInput').value;
             const desc = document.getElementById('descInput').value;
             const text = `مرحباً برو ماكس، أرغب بطلب:\n- نوع الجهاز: ${activeType}\n- الماركة: ${brand}\n- التفاصيل: ${desc}`;
