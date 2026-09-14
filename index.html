@@ -529,7 +529,7 @@
                 <i class="fa-solid fa-crown"></i> وكيلك المعتمد للهواتف والصيانة
             </div>
             <h1 class="hero-title">
-                جهازك الجديد، أو إضلاحه في نفس اليوم<br>
+                جهازك الجديد، أو إصلاحه في نفس اليوم<br>
                 <span>كل ما يحتاجه هاتفك... في مكان واحد</span>
             </h1>
             <p class="hero-desc">
@@ -746,36 +746,5 @@
         </div>
     </div>
 
-    <!-- نافذة تسجيل الدخول -->
-    <div id="loginModal" style="position: fixed; inset: 0; background: rgba(8,10,15,0.95); display: flex; align-items: center; justify-content: center; z-index: 9999;">
-        <div style="background: #121722; border: 1px solid rgba(212,175,55,0.35); padding: 25px; border-radius: 16px; width: 90%; max-width: 350px; text-align: center;">
-            <h3 style="color: #fff; margin-bottom: 15px;">تسجيل الدخول</h3>
-            <input type="text" id="username" placeholder="اسم المستخدم" style="width: 100%; padding: 10px; margin-bottom: 10px; background: #080a0f; border: 1px solid #444; color: #fff; border-radius: 8px;">
-            <input type="password" id="password" placeholder="كلمة المرور" style="width: 100%; padding: 10px; margin-bottom: 15px; background: #080a0f; border: 1px solid #444; color: #fff; border-radius: 8px;">
-            <button onclick="checkLogin()" style="width: 100%; padding: 12px; background: #d4af37; color: #080a0f; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">دخول</button>
-            <p id="loginError" style="color: #ef4444; font-size: 0.8rem; margin-top: 10px; display: none;">بيانات الدخول غير صحيحة!</p>
-        </div>
-    </div>
-
-    <script>
-        function checkLogin() {
-            const user = document.getElementById('username').value.trim();
-            const pass = document.getElementById('password').value.trim();
-            const errorMsg = document.getElementById('loginError');
-
-            // حساب المستخدم العادي
-            if (user === 'user' && pass === '1234') {
-                alert('مرحباً بك كـ "مستخدم عادي"');
-                document.getElementById('loginModal').style.display = 'none';
-            }
-            // حساب الأدمن الجديد
-            else if (user === 'Maystro' && pass === 'Maystro') {
-                alert('مرحباً بك كـ "أدمن" (صلاحيات كاملة)');
-                document.getElementById('loginModal').style.display = 'none';
-            } else {
-                errorMsg.style.display = 'block';
-            }
-        }
-    </script>
 </body>
 </html>
