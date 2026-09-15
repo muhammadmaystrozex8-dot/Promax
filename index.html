@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>برو ماكس | Pro Max - أعزاز | الهواتف، الكوبي، الإكسسوارات والصيانة</title>
+    <title>برو ماكس | Pro Max - أعزاز | الهواتف، الكوبي، الإكسسوارات والصيانة والمقارنة الذكية</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
@@ -349,6 +349,157 @@
             cursor: pointer;
         }
 
+        /* قسم مقارنة الأجهزة بالذكاء الاصطناعي (Gemini) */
+        .compare-section {
+            margin: 0 16px 24px;
+        }
+
+        .compare-form-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 14px;
+        }
+
+        .compare-form-desc {
+            font-size: 0.76rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .compare-inputs-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .compare-input {
+            flex: 1;
+        }
+
+        .compare-vs {
+            font-size: 0.72rem;
+            font-weight: 800;
+            color: var(--gold-primary);
+            flex: 0 0 auto;
+        }
+
+        .form-input, .form-textarea {
+            width: 100%;
+            background: var(--bg-obsidian);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 10px;
+            padding: 12px;
+            color: #fff;
+            font-size: 0.85rem;
+            outline: none;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            border-color: var(--gold-primary);
+        }
+
+        .ai-comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .phone-card {
+            background: var(--bg-card);
+            border-radius: 14px;
+            padding: 18px;
+            border: 1px solid var(--border-gold);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .phone-header {
+            text-align: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+
+        .phone-header h2 {
+            margin: 0;
+            color: var(--gold-bright);
+            font-size: 1.15rem;
+        }
+
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 9px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.78rem;
+        }
+
+        .spec-label {
+            font-weight: bold;
+            color: var(--text-secondary);
+        }
+
+        .spec-value {
+            text-align: left;
+            font-weight: 500;
+            color: #f1f5f9;
+            max-width: 60%;
+        }
+
+        .ai-summary {
+            background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(16,185,129,0.08));
+            border: 1px solid var(--border-gold);
+            border-radius: 14px;
+            padding: 18px;
+            margin-top: 15px;
+        }
+
+        .ai-summary h3 {
+            margin-top: 0;
+            color: var(--gold-bright);
+            font-size: 1rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .ai-summary p {
+            color: #cbd5e1;
+            font-size: 0.85rem;
+            line-height: 1.7;
+        }
+
+        .spinner {
+            width: 32px;
+            height: 32px;
+            border: 3px solid rgba(212, 175, 55, 0.2);
+            border-top: 3px solid var(--gold-primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 12px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-state {
+            text-align: center;
+            padding: 25px 0;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+        }
+
         /* قسم الصيانة المباشرة */
         .maintenance-box {
             background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(16,185,129,0.08));
@@ -482,22 +633,6 @@
             border-color: var(--gold-primary);
         }
 
-        .form-input, .form-textarea {
-            width: 100%;
-            background: var(--bg-obsidian);
-            border: 1px solid rgba(255,255,255,0.12);
-            border-radius: 10px;
-            padding: 12px;
-            color: #fff;
-            font-size: 0.85rem;
-            outline: none;
-            font-family: 'Cairo', sans-serif;
-        }
-
-        .form-input:focus, .form-textarea:focus {
-            border-color: var(--gold-primary);
-        }
-
         /* نافذة تسجيل الدخول */
         #loginModal {
             position: fixed;
@@ -529,213 +664,159 @@
             cursor: pointer;
         }
 
-        /* قسم مقارنة الأجهزة */
-        .compare-section {
-            margin: 0 16px 24px;
-        }
-
-        .compare-tabs {
-            display: flex;
-            gap: 6px;
-            overflow-x: auto;
-            padding-bottom: 10px;
-            margin-bottom: 4px;
-            scrollbar-width: none;
-        }
-
-        .compare-tabs::-webkit-scrollbar {
-            display: none;
-        }
-
-        .compare-tab {
+        /* قسم المعرض والمنشورات */
+        .gallery-admin-box {
             background: var(--bg-card);
             border: 1px solid var(--border-gold);
-            color: var(--text-secondary);
-            padding: 7px 12px;
-            border-radius: 20px;
-            font-size: 0.72rem;
-            font-weight: 700;
-            white-space: nowrap;
-            cursor: pointer;
+            border-radius: 18px;
+            margin: 0 16px 16px;
+            padding: 18px;
         }
 
-        .compare-tab.active {
-            background: var(--gold-primary);
-            color: #080a0f;
-            border-color: var(--gold-primary);
-        }
-
-        .compare-wrap {
-            overflow-x: auto;
-            border: 1px solid var(--border-gold);
-            border-radius: 16px;
-            background: var(--bg-card);
-        }
-
-        .compare-table {
-            width: 100%;
-            border-collapse: collapse;
-            min-width: 520px;
-        }
-
-        .compare-table th, .compare-table td {
-            padding: 10px 12px;
-            font-size: 0.74rem;
-            text-align: center;
-            border-bottom: 1px solid rgba(255,255,255,0.06);
-            white-space: nowrap;
-        }
-
-        .compare-table th {
-            background: var(--bg-card-alt);
-            color: var(--gold-bright);
-            font-weight: 800;
-            position: sticky;
-            top: 0;
-        }
-
-        .compare-table td:first-child, .compare-table th:first-child {
-            position: sticky;
-            right: 0;
-            background: var(--bg-card-alt);
-            text-align: right;
-            color: var(--gold-bright);
-            font-weight: 700;
-            z-index: 2;
-        }
-
-        .compare-table th:first-child {
-            z-index: 3;
-        }
-
-        .compare-table td {
-            color: #fff;
-        }
-
-        .compare-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .compare-device-name {
-            font-size: 0.76rem;
-            font-weight: 800;
-            color: #fff;
-        }
-
-        .compare-device-type {
-            display: inline-block;
-            margin-top: 3px;
-            font-size: 0.62rem;
-            font-weight: 700;
-            padding: 2px 7px;
-            border-radius: 8px;
-        }
-
-        .type-original {
-            background: rgba(16, 185, 129, 0.18);
-            color: #34d399;
-        }
-
-        .type-copy {
-            background: rgba(212, 175, 55, 0.18);
-            color: var(--gold-bright);
-        }
-
-        .compare-hint {
-            font-size: 0.7rem;
-            color: var(--text-secondary);
-            text-align: center;
-            margin-top: 8px;
-        }
-
-        .compare-order-row {
-            display: flex;
-            gap: 8px;
-            padding: 12px;
-            overflow-x: auto;
-            scrollbar-width: none;
-        }
-
-        .compare-order-row::-webkit-scrollbar {
-            display: none;
-        }
-
-        .compare-order-btn {
-            flex: 0 0 auto;
-            background: rgba(212, 175, 55, 0.15);
-            border: 1px solid var(--border-gold);
-            color: var(--gold-bright);
-            font-size: 0.7rem;
-            font-weight: 700;
-            padding: 6px 10px;
-            border-radius: 8px;
-            white-space: nowrap;
-            cursor: pointer;
-        }
-
-        .compare-form-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-gold);
-            border-radius: 16px;
-            padding: 16px;
-            margin-bottom: 14px;
-        }
-
-        .compare-form-desc {
-            font-size: 0.76rem;
-            color: var(--text-secondary);
-            margin-bottom: 12px;
-            text-align: center;
-        }
-
-        .compare-inputs-row {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 12px;
-        }
-
-        .compare-input {
-            flex: 1;
-        }
-
-        .compare-vs {
-            font-size: 0.72rem;
-            font-weight: 800;
-            color: var(--gold-primary);
-            flex: 0 0 auto;
-        }
-
-        .compare-btn {
-            width: 100%;
-        }
-
-        .compare-status {
+        .gallery-admin-locked {
             text-align: center;
             font-size: 0.78rem;
-            color: var(--gold-bright);
-            margin-top: 10px;
-            min-height: 1em;
+            color: var(--text-secondary);
+            padding: 6px 0;
         }
 
-        .compare-status.error {
-            color: #ef4444;
-        }
-
-        .compare-loader {
-            display: inline-block;
-            width: 14px;
-            height: 14px;
-            border: 2px solid rgba(212, 175, 55, 0.3);
-            border-top-color: var(--gold-primary);
-            border-radius: 50%;
-            animation: compareSpin 0.8s linear infinite;
-            vertical-align: middle;
+        .gallery-admin-locked i {
+            color: var(--gold-primary);
             margin-left: 6px;
         }
 
-        @keyframes compareSpin {
-            to { transform: rotate(360deg); }
+        .gallery-post-types {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+
+        .gallery-preview-box {
+            width: 100%;
+            height: 140px;
+            border-radius: 12px;
+            border: 1px dashed var(--border-gold);
+            background: var(--bg-obsidian);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-bottom: 12px;
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            text-align: center;
+            padding: 8px;
+        }
+
+        .gallery-preview-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-hint-box {
+            background: rgba(212, 175, 55, 0.08);
+            border: 1px solid var(--border-gold);
+            border-radius: 10px;
+            padding: 10px 12px;
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .gallery-hint-box strong {
+            color: var(--gold-bright);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            padding: 0 16px;
+            margin-bottom: 10px;
+        }
+
+        .gallery-post-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-post-img {
+            width: 100%;
+            height: 130px;
+            object-fit: cover;
+            display: block;
+            background: var(--bg-card-alt);
+        }
+
+        .gallery-post-body {
+            padding: 10px 12px 12px;
+        }
+
+        .gallery-post-title {
+            font-size: 0.82rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+
+        .gallery-post-desc {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+
+        .gallery-post-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 6px;
+        }
+
+        .gallery-post-price {
+            font-size: 0.76rem;
+            font-weight: 800;
+            color: var(--gold-bright);
+        }
+
+        .gallery-delete-btn {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            background: rgba(239, 68, 68, 0.85);
+            color: #fff;
+            border: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 8px;
+            font-size: 0.7rem;
+            cursor: pointer;
+            z-index: 5;
+        }
+
+        .gallery-empty-msg {
+            text-align: center;
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+            padding: 20px 16px;
+        }
+
+        .gallery-status {
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--gold-bright);
+            margin: 8px 0 16px;
+            min-height: 1em;
+        }
+
+        .gallery-status.error {
+            color: #ef4444;
         }
     </style>
 </head>
@@ -764,7 +845,7 @@
                 <span>وصيانة فورية بضمان حقيقي</span>
             </h1>
             <p class="hero-desc">
-                متجر برو ماكس في أعزاز يوفر تشكيلة واسعة من الهواتف الجديدة، المستعملة، ونسخ الكوبي الفاخرة (بما فيها S26 Ultra نسخ 1 تيرا / 12 غيغا)، مع جميع الإكسسوارات الحديثة، وقسم صيانة مباشر بأعلى كفاءة.
+                متجر برو ماكس في أعزاز يوفر تشكيلة واسعة من الهواتف الجديدة، المستعملة، ونسخ الكوبي الفاخرة، مع جميع الإكسسوارات الحديثة، وقسم صيانة مباشر بأعلى كفاءة.
             </p>
 
             <div class="hero-features">
@@ -796,10 +877,11 @@
         <div class="quick-nav-bar">
             <a href="#original-devices" class="quick-nav-btn">أجهزة أصلية (جديد/مستعمل)</a>
             <a href="#copy-devices" class="quick-nav-btn">أجهزة كوبي (Copy)</a>
-            <a href="#compare-section" class="quick-nav-btn">قارن بين الأجهزة</a>
+            <a href="#compare-section" class="quick-nav-btn">مقارنة الذكاء الاصطناعي</a>
             <a href="#accessories-section" class="quick-nav-btn">الإكسسوارات الحديثة</a>
             <a href="#maintenance-section" class="quick-nav-btn">الصيانة المباشرة</a>
             <a href="#location-section" class="quick-nav-btn">الموقع المباشر</a>
+            <a href="#gallery-section" class="quick-nav-btn">المعرض والمنشورات</a>
         </div>
 
         <!-- 1. قسم الأجهزة الأصلية (جديد ومستعمل) -->
@@ -868,31 +950,48 @@
             </div>
         </div>
 
-        <!-- مقارنة الأجهزة (بحث مباشر عبر الإنترنت) -->
+        <!-- مقارنة الأجهزة بالذكاء الاصطناعي (Gemini Engine) -->
         <div class="section-header" id="compare-section">
-            <div class="section-tag">قارن قبل ما تقرر</div>
-            <h2 class="section-heading">قارن بين أي جهازين عبر الإنترنت</h2>
+            <div class="section-tag">مقارنة ذكية لحظية</div>
+            <h2 class="section-heading">محرك المقارنة الذكي بالذكاء الاصطناعي</h2>
         </div>
         <div class="compare-section">
             <div class="compare-form-card">
-                <p class="compare-form-desc">اكتب اسم أي جهازين وسنجلب لك أحدث المواصفات (المعالج، الذاكرة، الكاميرا، البطارية...) تلقائياً من الإنترنت.</p>
+                <p class="compare-form-desc">اكتب اسم أي هاتفين في الأسفل ودع الذكاء الاصطناعي يجلب المواصفات ويقارن بينهما لحظياً</p>
                 <div class="compare-inputs-row">
-                    <input type="text" id="deviceOneInput" class="form-input compare-input" placeholder="الجهاز الأول: مثال iPhone 15 Pro Max">
+                    <input type="text" id="phoneInput1" class="form-input compare-input" placeholder="مثال: Samsung Galaxy A56">
                     <span class="compare-vs">VS</span>
-                    <input type="text" id="deviceTwoInput" class="form-input compare-input" placeholder="الجهاز الثاني: مثال Samsung S24 Ultra">
+                    <input type="text" id="phoneInput2" class="form-input compare-input" placeholder="مثال: Infinix Note 60 Pro">
                 </div>
-                <button type="button" class="btn-primary compare-btn" onclick="compareDevicesAI()">
-                    <i class="fa-solid fa-magnifying-glass"></i> قارن الآن عبر الإنترنت
+                <!-- حقل إدخال مفتاح API محلياً من قبل المستخدم دون حفظه بالكود -->
+                <div class="form-group" style="margin-bottom: 10px;">
+                    <input type="password" id="customApiKeyInput" class="form-input" placeholder="ضع مفتاح Gemini API الخاص بك هنا مؤقتاً (اختياري)">
+                </div>
+                <button type="button" class="btn-primary compare-btn" onclick="startAIComparison()">
+                    <i class="fa-solid fa-magnifying-glass"></i> مقارنة الآن عبر الذكاء الاصطناعي
                 </button>
-                <div id="compareStatus" class="compare-status"></div>
             </div>
 
-            <div class="compare-wrap" id="compareResultWrap" style="display:none;">
-                <table class="compare-table" id="compareTable"></table>
-            </div>
-            <p class="compare-hint" id="compareHint" style="display:none;">المواصفات مجمّعة تلقائياً من مصادر عامة على الإنترنت وقد تختلف قليلاً حسب الإصدار - ننصح بمعاينة الجهاز مباشرة بالمحل قبل الشراء.</p>
+            <div class="ai-comparison-grid">
+                <div class="phone-card" id="card1">
+                    <div class="phone-header">
+                        <h2>الهاتف الأول</h2>
+                    </div>
+                    <div id="specs1" class="loading-state">بانتظار الإدخال...</div>
+                </div>
 
-            <div class="compare-order-row" id="compareOrderRow" style="display:none;"></div>
+                <div class="phone-card" id="card2">
+                    <div class="phone-header">
+                        <h2>الهاتف الثاني</h2>
+                    </div>
+                    <div id="specs2" class="loading-state">بانتظار الإدخال...</div>
+                </div>
+
+                <div class="ai-summary" id="aiSummaryBox" style="display: none;">
+                    <h3>🤖 الخلاصة والتحليل الذكي</h3>
+                    <p id="aiSummaryText"></p>
+                </div>
+            </div>
         </div>
 
         <!-- 3. قسم الإكسسوارات الحديثة بالكامل -->
@@ -952,38 +1051,12 @@
                     </div>
                 </div>
             </div>
-
-            <div class="device-card">
-                <span class="card-badge-tag">ساعات ذكية</span>
-                <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=500" alt="ساعات ذكية" class="device-card-img">
-                <div class="device-card-body">
-                    <div class="device-card-title">ساعات ذكية Ultra / Smartwatch</div>
-                    <div class="device-card-desc">مراقبة نبض القلب، مكالمات بلوتوث، وشاشات AMOLED عالية الدقة.</div>
-                    <div class="device-card-footer">
-                        <span class="device-card-price">متوفر</span>
-                        <button class="order-item-btn" onclick="quickOrder('ساعة ذكية Ultra')">اطلب الآن</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="device-card">
-                <span class="card-badge-tag">كفرات وأغطية</span>
-                <img src="https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=500" alt="كفرات حماية" class="device-card-img">
-                <div class="device-card-body">
-                    <div class="device-card-title">كفرات حماية فاخرة & MagSafe</div>
-                    <div class="device-card-desc">تشكيلة واسعة من الكفرات المضادة للصدمات وكفرات الماغسيف.</div>
-                    <div class="device-card-footer">
-                        <span class="device-card-price">متوفر</span>
-                        <button class="order-item-btn" onclick="quickOrder('كفر حماية MagSafe')">اطلب الآن</button>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <!-- 4. قسم الصيانة المباشرة -->
         <div class="maintenance-box" id="maintenance-section">
             <div class="section-tag" style="text-align: center;">خدمات الصيانة</div>
-            <h3 class="why-title" style="color: #fff; font-size: 1.2rem; text-align: center;">قسم الصيانة المباشرة (فحص فوري في نفس اليوم)</h3>
+            <h3 style="color: #fff; font-size: 1.2rem; text-align: center;">قسم الصيانة المباشرة (فحص فوري في نفس اليوم)</h3>
             <p style="color: var(--text-secondary); font-size: 0.78rem; text-align: center; margin-bottom: 8px;">فريق تقني متخصص بتبديل القطع وحل كافة أعطال الهواتف</p>
 
             <div class="maintenance-list">
@@ -1025,7 +1098,6 @@
             <p style="color: var(--text-secondary); font-size: 0.76rem;">زورنا في مركز المدينة لخدمتكم بشكل مباشر</p>
 
             <div class="location-info">
-                <!-- خريطة جوجل المدمجة لمنطقة أعزاز -->
                 <div style="width: 100%; height: 180px; border-radius: 12px; overflow: hidden; margin: 10px 0; border: 1px solid var(--border-gold);">
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51655.61793740263!2d37.0097727!3d36.5866164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1525e98a3c00f7ad%3A0xc3c51ee601f78684!2z2KfZhNmF2LHYp9mG2Iwg2LHQsNC32LTZgA!5e0!3m2!1sar!2s!4v1700000000000!5m2!1sar!2s" 
@@ -1050,13 +1122,64 @@
                     <i class="fa-solid fa-phone"></i>
                     <span><strong>رقم التواصل المباشر:</strong> +905314531305</span>
                 </div>
-                <div style="margin-top: 8px;">
-                    <a href="https://maps.app.goo.gl/AZAZ_LINK_HERE" target="_blank" class="btn-primary" style="padding: 10px; font-size: 0.85rem; text-align: center;">
-                        <i class="fa-solid fa-map-location-dot"></i> فتح الموقع عبر تطبيق خرائط جوجل
-                    </a>
-                </div>
             </div>
         </div>
+
+        <!-- 6. قسم المعرض والمنشورات -->
+        <div class="section-header" id="gallery-section">
+            <div class="section-tag">أضف من الموقع مباشرة</div>
+            <h2 class="section-heading">المعرض والمنشورات</h2>
+        </div>
+
+        <div class="gallery-admin-box">
+            <div id="galleryLockedMsg" class="gallery-admin-locked">
+                <i class="fa-solid fa-lock"></i> سجّل دخولك كمدير (من زر "دخول / حساب" أعلى الصفحة) لتتمكن من إضافة صور ومنشورات جديدة.
+            </div>
+
+            <div id="galleryAdminForm" style="display:none;">
+                <div class="form-group">
+                    <label class="form-label">نوع المنشور</label>
+                    <div class="gallery-post-types">
+                        <div class="type-option active" onclick="selectGalleryType(this)">جهاز</div>
+                        <div class="type-option" onclick="selectGalleryType(this)">إكسسوار</div>
+                        <div class="type-option" onclick="selectGalleryType(this)">صيانة</div>
+                        <div class="type-option" onclick="selectGalleryType(this)">عرض</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">صورة المنشور</label>
+                    <input type="file" id="galleryImageFile" class="form-input" accept="image/*" onchange="uploadGalleryImage()">
+                    <input type="hidden" id="galleryImageInput" value="">
+                </div>
+
+                <div class="gallery-preview-box" id="galleryPreviewBox">ستظهر الصورة هنا بعد الرفع</div>
+                <div id="galleryUploadStatus" class="gallery-status"></div>
+
+                <div class="form-group">
+                    <label class="form-label">عنوان المنشور</label>
+                    <input type="text" id="galleryTitleInput" class="form-input" placeholder="مثال: وصل حديثاً - iPhone 16 Pro">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">الوصف</label>
+                    <textarea id="galleryDescInput" class="form-textarea" rows="2" placeholder="تفاصيل مختصرة عن المنشور..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">السعر (اختياري)</label>
+                    <input type="text" id="galleryPriceInput" class="form-input" placeholder="مثال: تواصل للسعر / 250$">
+                </div>
+
+                <button type="button" class="btn-primary" style="width:100%;" onclick="publishGalleryPost()">
+                    <i class="fa-solid fa-cloud-arrow-up"></i> نشر على الموقع الآن
+                </button>
+                <div id="galleryStatus" class="gallery-status"></div>
+            </div>
+        </div>
+
+        <div id="galleryGrid" class="gallery-grid"></div>
+        <div id="galleryEmptyMsg" class="gallery-empty-msg" style="display:none;">لا توجد منشورات بعد. كن أول من يضيف صورة!</div>
 
         <!-- نموذج اطلب خدمتك الآن -->
         <div class="form-card" id="request-form">
@@ -1112,6 +1235,8 @@
     </div>
 
     <script>
+        const IMGBB_API_KEY = "ضع_مفتاح_imgbb_هنا_إن_أردت";
+
         function openLoginModal() {
             document.getElementById('loginModal').style.display = 'flex';
         }
@@ -1120,9 +1245,21 @@
             document.getElementById('loginModal').style.display = 'none';
         }
 
+        let isAdmin = false;
+
         function selectDeviceType(el) {
-            document.querySelectorAll('.type-option').forEach(item => item.classList.remove('active'));
+            el.parentElement.querySelectorAll('.type-option').forEach(item => item.classList.remove('active'));
             el.classList.add('active');
+        }
+
+        function selectGalleryType(el) {
+            el.parentElement.querySelectorAll('.type-option').forEach(item => item.classList.remove('active'));
+            el.classList.add('active');
+        }
+
+        function updateAdminUI() {
+            document.getElementById('galleryLockedMsg').style.display = isAdmin ? 'none' : 'block';
+            document.getElementById('galleryAdminForm').style.display = isAdmin ? 'block' : 'none';
         }
 
         function loginUser() {
@@ -1131,33 +1268,22 @@
             const errorMsg = document.getElementById('loginError');
 
             if (user.toLowerCase() === 'mahmood' && pass === 'maystro') {
+                isAdmin = true;
                 document.getElementById('currentUserBadge').innerText = user;
+                updateAdminUI();
                 closeLoginModal();
-                alert('أهلاً بك يا ' + user);
+                alert('أهلاً بك يا ' + user + ' - يمكنك الآن إضافة صور ومنشورات من قسم "المعرض والمنشورات"');
             } else {
                 errorMsg.style.display = 'block';
             }
         }
 
         function loginAsGuest() {
+            isAdmin = false;
             document.getElementById('currentUserBadge').innerText = 'زائر';
+            updateAdminUI();
             closeLoginModal();
         }
-
-        const compareSpecRows = [
-            { key: "screen", label: "الشاشة" },
-            { key: "processor", label: "المعالج" },
-            { key: "ram", label: "ذاكرة الوصول RAM" },
-            { key: "storage", label: "سعة التخزين" },
-            { key: "rearCamera", label: "الكاميرا الخلفية" },
-            { key: "frontCamera", label: "الكاميرا الأمامية" },
-            { key: "battery", label: "البطارية" },
-            { key: "charging", label: "الشحن" },
-            { key: "os", label: "نظام التشغيل" },
-            { key: "build", label: "الهيكل والخامة" },
-            { key: "releaseYear", label: "سنة الإصدار" },
-            { key: "approxPrice", label: "السعر التقريبي" }
-        ];
 
         function escapeHtml(str) {
             const div = document.createElement('div');
@@ -1165,93 +1291,287 @@
             return div.innerHTML;
         }
 
-        async function compareDevicesAI() {
-            const deviceOne = document.getElementById('deviceOneInput').value.trim();
-            const deviceTwo = document.getElementById('deviceTwoInput').value.trim();
-            const statusEl = document.getElementById('compareStatus');
-            const resultWrap = document.getElementById('compareResultWrap');
-            const hintEl = document.getElementById('compareHint');
-            const orderRow = document.getElementById('compareOrderRow');
+        async function startAIComparison() {
+            const phone1 = document.getElementById('phoneInput1').value.trim();
+            const phone2 = document.getElementById('phoneInput2').value.trim();
+            const apiKey = document.getElementById('customApiKeyInput').value.trim();
 
-            if (!deviceOne || !deviceTwo) {
-                statusEl.className = 'compare-status error';
-                statusEl.innerText = 'الرجاء إدخال اسم الجهازين أولاً.';
+            if (!phone1 || !phone2) {
+                alert('يرجى كتابة اسم الهاتفين معاً لإجراء المقارنة.');
                 return;
             }
 
-            statusEl.className = 'compare-status';
-            statusEl.innerHTML = 'جاري جلب المواصفات من الإنترنت...<span class="compare-loader"></span>';
-            resultWrap.style.display = 'none';
-            hintEl.style.display = 'none';
-            orderRow.style.display = 'none';
+            if (!apiKey) {
+                alert('يرجى إدخال مفتاح Gemini API في الحقل المخصص أعلاه لإجراء المقارنة.');
+                return;
+            }
 
-            const prompt = `ابحث في الإنترنت عن المواصفات الرسمية الحقيقية والمحدّثة لهاتفين: "${deviceOne}" و "${deviceTwo}".
-أجب حصراً بكائن JSON صالح دون أي نص إضافي أو علامات markdown، بهذا الشكل بالضبط:
-{
-  "device1": {"name": "الاسم الكامل للجهاز 1", "screen": "...", "processor": "...", "ram": "...", "storage": "...", "rearCamera": "...", "frontCamera": "...", "battery": "...", "charging": "...", "os": "...", "build": "...", "releaseYear": "...", "approxPrice": "..."},
-  "device2": {"name": "الاسم الكامل للجهاز 2", "screen": "...", "processor": "...", "ram": "...", "storage": "...", "rearCamera": "...", "frontCamera": "...", "battery": "...", "charging": "...", "os": "...", "build": "...", "releaseYear": "...", "approxPrice": "..."}
-}
-اكتب كل القيم باللغة العربية بإيجاز شديد (أقل من 12 كلمة لكل حقل). إذا لم تجد الجهاز، اكتب "غير متوفر" في حقوله.`;
+            const loadingHTML = `
+                <div class="spinner"></div>
+                <p>جاري البحث وجلب البيانات عبر الذكاء الاصطناعي...</p>
+            `;
+
+            document.getElementById('specs1').innerHTML = loadingHTML;
+            document.getElementById('specs2').innerHTML = loadingHTML;
+            document.getElementById('aiSummaryBox').style.display = 'none';
+
+            const prompt = `
+            أنت خبير تقني ومحلل هواتف ذكية. قم بالبحث وتحليل جهازين هما:
+            1. ${phone1}
+            2. ${phone2}
+
+            أعطني الرد حصراً بصيغة JSON صحيحة تحتوي على المفاتيح التالية دون أي نص زائد خارج الجيسون:
+            {
+              "phone1": {
+                "name": "الاسم الكامل",
+                "screen": "المواصفات",
+                "processor": "المعالج",
+                "ram": "الرام",
+                "storage": "التخزين",
+                "camera": "الكاميرات",
+                "battery": "البطارية",
+                "os": "النظام"
+              },
+              "phone2": {
+                "name": "الاسم الكامل",
+                "screen": "المواصفات",
+                "processor": "المعالج",
+                "ram": "الرام",
+                "storage": "التخزين",
+                "camera": "الكاميرات",
+                "battery": "البطارية",
+                "os": "النظام"
+              },
+              "summary": "فقرة موجزة تقارن فيها أيهما أفضل ولماذا باختصار شديد باللغة العربية"
+            }
+            `;
 
             try {
-                const response = await fetch("https://api.anthropic.com/v1/messages", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
+                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        model: "claude-sonnet-4-6",
-                        max_tokens: 1000,
-                        messages: [{ role: "user", content: prompt }],
-                        tools: [{ type: "web_search_20250305", name: "web_search" }]
+                        contents: [{ parts: [{ text: prompt }] }],
+                        generationConfig: { responseMimeType: "application/json" }
                     })
                 });
 
+                if (!response.ok) {
+                    throw new Error('فشل الاتصال بخدمة الذكاء الاصطناعي، تأكد من صحة المفتاح');
+                }
+
                 const data = await response.json();
-                const textBlocks = (data.content || [])
-                    .filter(block => block.type === 'text')
-                    .map(block => block.text)
-                    .join('\n');
+                const resultText = data.candidates[0].content.parts[0].text;
+                const parsed = JSON.parse(resultText);
 
-                const cleaned = textBlocks.replace(/```json|```/g, '').trim();
-                const jsonMatch = cleaned.match(/\{[\s\S]*\}/);
-                if (!jsonMatch) throw new Error('لم يتم العثور على بيانات صالحة');
+                renderCard('specs1', parsed.phone1);
+                renderCard('specs2', parsed.phone2);
 
-                const parsed = JSON.parse(jsonMatch[0]);
-                renderCompareResult(parsed.device1, parsed.device2);
+                document.getElementById('aiSummaryText').textContent = parsed.summary;
+                document.getElementById('aiSummaryBox').style.display = 'block';
 
-                statusEl.className = 'compare-status';
-                statusEl.innerText = 'تم جلب المواصفات بنجاح ✅';
-            } catch (err) {
-                console.error('Compare error:', err);
-                statusEl.className = 'compare-status error';
-                statusEl.innerText = 'تعذّر جلب المواصفات حالياً، حاول مرة أخرى أو تواصل معنا مباشرة عبر واتساب.';
+            } catch (error) {
+                console.error(error);
+                const errorHTML = '<span style="color: #ef4444; font-weight: bold;">حدث خطأ أثناء جلب البيانات. تأكد من صحة مفتاح API أو اتصال الإنترنت.</span>';
+                document.getElementById('specs1').innerHTML = errorHTML;
+                document.getElementById('specs2').innerHTML = errorHTML;
             }
         }
 
-        function renderCompareResult(d1, d2) {
-            const table = document.getElementById('compareTable');
-            const resultWrap = document.getElementById('compareResultWrap');
-            const hintEl = document.getElementById('compareHint');
-            const orderRow = document.getElementById('compareOrderRow');
-
-            let html = '<thead><tr><th>المواصفة</th><th><div class="compare-device-name">' +
-                escapeHtml(d1.name) + '</div></th><th><div class="compare-device-name">' +
-                escapeHtml(d2.name) + '</div></th></tr></thead><tbody>';
-
-            compareSpecRows.forEach(row => {
-                html += '<tr><td>' + escapeHtml(row.label) + '</td><td>' +
-                    escapeHtml(d1[row.key]) + '</td><td>' + escapeHtml(d2[row.key]) + '</td></tr>';
-            });
-            html += '</tbody>';
-
-            table.innerHTML = html;
-            resultWrap.style.display = 'block';
-            hintEl.style.display = 'block';
-
-            orderRow.innerHTML =
-                '<button class="compare-order-btn" onclick="quickOrder(\'استفسار مقارنة: ' + (d1.name || '').replace(/'/g, '') + '\')">اطلب ' + escapeHtml(d1.name) + '</button>' +
-                '<button class="compare-order-btn" onclick="quickOrder(\'استفسار مقارنة: ' + (d2.name || '').replace(/'/g, '') + '\')">اطلب ' + escapeHtml(d2.name) + '</button>';
-            orderRow.style.display = 'flex';
+        function renderCard(elementId, p) {
+            const container = document.getElementById(elementId);
+            container.innerHTML = `
+                <div class="phone-header">
+                    <h2>${escapeHtml(p.name)}</h2>
+                </div>
+                <div class="spec-item"><span class="spec-label">الشاشة</span><span class="spec-value">${escapeHtml(p.screen)}</span></div>
+                <div class="spec-item"><span class="spec-label">المعالج</span><span class="spec-value">${escapeHtml(p.processor)}</span></div>
+                <div class="spec-item"><span class="spec-label">الرام</span><span class="spec-value">${escapeHtml(p.ram)}</span></div>
+                <div class="spec-item"><span class="spec-label">التخزين</span><span class="spec-value">${escapeHtml(p.storage)}</span></div>
+                <div class="spec-item"><span class="spec-label">الكاميرات</span><span class="spec-value">${escapeHtml(p.camera)}</span></div>
+                <div class="spec-item"><span class="spec-label">البطارية</span><span class="spec-value">${escapeHtml(p.battery)}</span></div>
+                <div class="spec-item"><span class="spec-label">النظام</span><span class="spec-value">${escapeHtml(p.os)}</span></div>
+                <div style="margin-top: 10px; text-align: left;">
+                    <button class="order-item-btn" onclick="quickOrder('${escapeHtml(p.name)}')">اطلب الجهاز</button>
+                </div>
+            `;
         }
+
+        async function uploadGalleryImage() {
+            const fileInput = document.getElementById('galleryImageFile');
+            const hiddenUrlInput = document.getElementById('galleryImageInput');
+            const box = document.getElementById('galleryPreviewBox');
+            const uploadStatus = document.getElementById('galleryUploadStatus');
+            const file = fileInput.files[0];
+
+            hiddenUrlInput.value = '';
+
+            if (!file) {
+                box.innerHTML = 'ستظهر الصورة هنا بعد الرفع';
+                return;
+            }
+
+            if (!IMGBB_API_KEY || IMGBB_API_KEY === 'ضع_مفتاح_imgbb_هنا_إن_أردت') {
+                uploadStatus.className = 'gallery-status error';
+                uploadStatus.innerText = 'لم يتم إعداد مفتاح ImgBB بعد.';
+                fileInput.value = '';
+                return;
+            }
+
+            box.innerHTML = 'جاري رفع الصورة...<span class="spinner" style="width:20px;height:20px;"></span>';
+            uploadStatus.className = 'gallery-status';
+            uploadStatus.innerText = '';
+
+            try {
+                const formData = new FormData();
+                formData.append('image', file);
+
+                const response = await fetch(`https://api.imgbb.com/1/upload?key=${IMGBB_API_KEY}`, {
+                    method: 'POST',
+                    body: formData
+                });
+                const data = await response.json();
+
+                if (!data.success) throw new Error(data.error?.message || 'فشل الرفع');
+
+                const uploadedUrl = data.data.url;
+                hiddenUrlInput.value = uploadedUrl;
+                box.innerHTML = '<img src="' + uploadedUrl + '">';
+                uploadStatus.innerText = 'تم رفع الصورة بنجاح ✅';
+            } catch (err) {
+                console.error('Upload error:', err);
+                box.innerHTML = 'ستظهر الصورة هنا بعد الرفع';
+                uploadStatus.className = 'gallery-status error';
+                uploadStatus.innerText = 'تعذّر رفع الصورة، تحقق من اتصالك وحاول مرة أخرى.';
+                fileInput.value = '';
+            }
+        }
+
+        async function publishGalleryPost() {
+            const statusEl = document.getElementById('galleryStatus');
+            const activeTypeEl = document.querySelector('.gallery-post-types .type-option.active');
+            const type = activeTypeEl ? activeTypeEl.innerText : 'جهاز';
+            const image = document.getElementById('galleryImageInput').value.trim();
+            const title = document.getElementById('galleryTitleInput').value.trim();
+            const desc = document.getElementById('galleryDescInput').value.trim();
+            const price = document.getElementById('galleryPriceInput').value.trim();
+
+            if (!image) {
+                statusEl.className = 'gallery-status error';
+                statusEl.innerText = 'الرجاء رفع صورة أولاً وانتظار اكتمال الرفع.';
+                return;
+            }
+            if (!title) {
+                statusEl.className = 'gallery-status error';
+                statusEl.innerText = 'الرجاء إدخال عنوان للمنشور.';
+                return;
+            }
+
+            statusEl.className = 'gallery-status';
+            statusEl.innerText = 'جاري النشر...';
+
+            try {
+                const id = 'post_' + Date.now();
+                const post = { id, type, image, title, desc, price, createdAt: Date.now() };
+
+                await window.storage.set('posts:' + id, JSON.stringify(post), true);
+
+                let index = [];
+                try {
+                    const indexResult = await window.storage.get('posts:index', true);
+                    index = indexResult ? JSON.parse(indexResult.value) : [];
+                } catch (e) {
+                    index = [];
+                }
+                index.unshift(id);
+                await window.storage.set('posts:index', JSON.stringify(index), true);
+
+                document.getElementById('galleryImageFile').value = '';
+                document.getElementById('galleryImageInput').value = '';
+                document.getElementById('galleryTitleInput').value = '';
+                document.getElementById('galleryDescInput').value = '';
+                document.getElementById('galleryPriceInput').value = '';
+                document.getElementById('galleryPreviewBox').innerHTML = 'ستظهر الصورة هنا بعد الرفع';
+                document.getElementById('galleryUploadStatus').innerText = '';
+
+                statusEl.innerText = 'تم النشر بنجاح ✅ سيظهر المنشور للجميع الآن.';
+                loadGalleryPosts();
+            } catch (err) {
+                console.error('Publish error:', err);
+                statusEl.className = 'gallery-status error';
+                statusEl.innerText = 'حدث خطأ أثناء النشر، حاول مرة أخرى.';
+            }
+        }
+
+        async function loadGalleryPosts() {
+            const grid = document.getElementById('galleryGrid');
+            const emptyMsg = document.getElementById('galleryEmptyMsg');
+
+            try {
+                const indexResult = await window.storage.get('posts:index', true);
+                const index = indexResult ? JSON.parse(indexResult.value) : [];
+
+                if (!index.length) {
+                    grid.innerHTML = '';
+                    emptyMsg.style.display = 'block';
+                    return;
+                }
+
+                const posts = [];
+                for (const id of index) {
+                    try {
+                        const result = await window.storage.get('posts:' + id, true);
+                        if (result) posts.push(JSON.parse(result.value));
+                    } catch (e) { /* skip missing/deleted post */ }
+                }
+
+                if (!posts.length) {
+                    grid.innerHTML = '';
+                    emptyMsg.style.display = 'block';
+                    return;
+                }
+
+                emptyMsg.style.display = 'none';
+                grid.innerHTML = posts.map(p => `
+                    <div class="gallery-post-card">
+                        ${isAdmin ? `<button class="gallery-delete-btn" onclick="deleteGalleryPost('${p.id}')"><i class="fa-solid fa-xmark"></i></button>` : ''}
+                        <img class="gallery-post-img" src="${p.image}" alt="${escapeHtml(p.title)}" onerror="this.src='https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?w=500'">
+                        <div class="gallery-post-body">
+                            <div class="gallery-post-title">${escapeHtml(p.title)}</div>
+                            <div class="gallery-post-desc">${escapeHtml(p.desc)}</div>
+                            <div class="gallery-post-footer">
+                                <span class="gallery-post-price">${escapeHtml(p.price) || p.type}</span>
+                                <button class="order-item-btn" onclick="quickOrder('${(p.title || '').replace(/'/g, '')}')">اطلب</button>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            } catch (err) {
+                console.error('Load gallery error:', err);
+                grid.innerHTML = '';
+                emptyMsg.style.display = 'block';
+                emptyMsg.innerText = 'تعذّر تحميل المنشورات حالياً.';
+            }
+        }
+
+        async function deleteGalleryPost(id) {
+            if (!isAdmin) return;
+            if (!confirm('هل تريد حذف هذا المنشور؟')) return;
+
+            try {
+                await window.storage.delete('posts:' + id, true);
+                const indexResult = await window.storage.get('posts:index', true);
+                let index = indexResult ? JSON.parse(indexResult.value) : [];
+                index = index.filter(pid => pid !== id);
+                await window.storage.set('posts:index', JSON.stringify(index), true);
+                loadGalleryPosts();
+            } catch (err) {
+                console.error('Delete error:', err);
+                alert('تعذّر حذف المنشور، حاول مرة أخرى.');
+            }
+        }
+
+        loadGalleryPosts();
 
         function quickOrder(itemName) {
             const text = `مرحباً برو ماكس، أرغب بالاستفسار / طلب المنتج التالي: ${itemName}`;
