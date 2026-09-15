@@ -1128,14 +1128,14 @@
             </div>
         </div>
 
-        <!-- مقارنة ذكية بالذكاء الاصطناعي (بحث مباشر عبر الإنترنت) -->
+        <!-- مقارنة ذكية بالذكاء الاصطناعي (بحث مباشر عبر خادم Vercel + Gemini) -->
         <div class="section-header" id="compare-section">
             <div class="section-tag">مقارنة ذكية فورية</div>
             <h2 class="section-heading">قارن بين أي منتجين بالذكاء الاصطناعي</h2>
         </div>
         <div class="compare-section">
             <div class="compare-form-card">
-                <p class="compare-form-desc">اكتب اسم أي منتجين (هاتف، ساعة ذكية، سماعة، باور بانك، إكسسوار...) وسيقارن الذكاء الاصطناعي مواصفاتهما فوراً من الإنترنت.</p>
+                <p class="compare-form-desc">اكتب اسم أي منتجين (هاتف، ساعة ذكية، سماعة، باور بانك، إكسسوار...) وسيقارن الذكاء الاصطناعي مواصفاتهما فوراً من نتائج بحث حية.</p>
                 <div class="compare-inputs-row">
                     <input type="text" id="deviceOneInput" class="form-input compare-input" placeholder="مثال: iPhone 15 Pro Max">
                     <span class="compare-vs">VS</span>
@@ -1150,7 +1150,7 @@
             <div class="compare-wrap" id="compareResultWrap" style="display:none;">
                 <table class="compare-table" id="compareTable"></table>
             </div>
-            <p class="compare-hint" id="compareHint" style="display:none;">المواصفات مجمّعة تلقائياً من مصادر عامة على الإنترنت وقد تختلف قليلاً حسب الإصدار - ننصح بمعاينة الجهاز مباشرة بالمحل قبل الشراء.</p>
+            <p class="compare-hint" id="compareHint" style="display:none;">المواصفات مجمّعة تلقائياً من نتائج بحث حية وقد تختلف قليلاً حسب الإصدار - ننصح بمعاينة الجهاز مباشرة بالمحل قبل الشراء.</p>
 
             <div class="compare-order-row" id="compareOrderRow" style="display:none;"></div>
         </div>
@@ -1544,6 +1544,7 @@
             return div.innerHTML;
         }
 
+        // مقارنة عبر خادم Vercel + Gemini API (بحث مباشر، دقيق، يعمل على كل الأجهزة)
         async function compareDevicesAI() {
             const deviceOne = document.getElementById('deviceOneInput').value.trim();
             const deviceTwo = document.getElementById('deviceTwoInput').value.trim();
@@ -1564,43 +1565,19 @@
             hintEl.style.display = 'none';
             orderRow.style.display = 'none';
 
-            // برومبت عام يدعم أي نوع منتج تقني (هاتف، ساعة، سماعة، إكسسوار...) مع تعليمات لبحث سريع ومختصر
-            const prompt = `أنت مساعد مقارنة منتجات تقنية سريع. قارن بين: "${deviceOne}" و "${deviceTwo}" (قد يكونا هاتفين، ساعتين ذكيتين، سماعتين، أو أي إكسسوار تقني آخر - حدد نوعهما تلقائياً).
-افحص المنتجين بسرعة (بحث واحد أو اثنين كحد أقصى لكل منتج) ثم أجب فوراً.
-أجب حصراً بكائن JSON صالح دون أي نص إضافي أو علامات markdown، بهذا الشكل بالضبط:
-{
-  "category": "نوع المنتجين (مثال: هواتف ذكية / ساعات ذكية / سماعات)",
-  "device1": {"name": "الاسم الكامل"},
-  "device2": {"name": "الاسم الكامل"},
-  "specs": [
-    {"label": "اسم المواصفة", "value1": "قيمة المنتج الأول", "value2": "قيمة المنتج الثاني"}
-  ]
-}
-اختر بنفسك أنسب 7 إلى 10 مواصفات لنوع هذا المنتج تحديداً (مثلاً للهواتف: الشاشة، المعالج، الرام، التخزين، الكاميرا، البطارية؛ وللساعات: الشاشة، البطارية، مقاومة الماء، المستشعرات؛ وللسماعات: نوع الاتصال، عزل الضوضاء، مدة البطارية). اكتب كل القيم بالعربية وبإيجاز شديد (أقل من 10 كلمات لكل قيمة). إذا لم تجد المنتج، اكتب "غير متوفر".`;
-
             try {
-                const response = await fetch("https://api.anthropic.com/v1/messages", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({
-                        model: "claude-sonnet-4-6",
-                        max_tokens: 1200,
-                        messages: [{ role: "user", content: prompt }],
-                        tools: [{ type: "web_search_20250305", name: "web_search" }]
-                    })
+                const response = await fetch('/api/compare', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ deviceOne, deviceTwo })
                 });
 
-                const data = await response.json();
-                const textBlocks = (data.content || [])
-                    .filter(block => block.type === 'text')
-                    .map(block => block.text)
-                    .join('\n');
+                if (!response.ok) {
+                    const errData = await response.json().catch(() => ({}));
+                    throw new Error(errData.error || 'فشل الاتصال بالخادم');
+                }
 
-                const cleaned = textBlocks.replace(/```json|```/g, '').trim();
-                const jsonMatch = cleaned.match(/\{[\s\S]*\}/);
-                if (!jsonMatch) throw new Error('لم يتم العثور على بيانات صالحة');
-
-                const parsed = JSON.parse(jsonMatch[0]);
+                const parsed = await response.json();
                 renderCompareResult(parsed);
 
                 statusEl.className = 'compare-status';
