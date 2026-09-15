@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>برو ماكس | Pro Max - أعزاز | الهواتف، الكوبي، الإكسسوارات والصيانة والمقارنة الذكية</title>
+    <title>برو ماكس | Pro Max - أعزاز | الهواتف، الكوبي، الإكسسوارات والصيانة</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
@@ -349,157 +349,6 @@
             cursor: pointer;
         }
 
-        /* قسم مقارنة الأجهزة بالذكاء الاصطناعي (Gemini) */
-        .compare-section {
-            margin: 0 16px 24px;
-        }
-
-        .compare-form-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-gold);
-            border-radius: 16px;
-            padding: 16px;
-            margin-bottom: 14px;
-        }
-
-        .compare-form-desc {
-            font-size: 0.76rem;
-            color: var(--text-secondary);
-            margin-bottom: 12px;
-            text-align: center;
-        }
-
-        .compare-inputs-row {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 12px;
-        }
-
-        .compare-input {
-            flex: 1;
-        }
-
-        .compare-vs {
-            font-size: 0.72rem;
-            font-weight: 800;
-            color: var(--gold-primary);
-            flex: 0 0 auto;
-        }
-
-        .form-input, .form-textarea {
-            width: 100%;
-            background: var(--bg-obsidian);
-            border: 1px solid rgba(255,255,255,0.12);
-            border-radius: 10px;
-            padding: 12px;
-            color: #fff;
-            font-size: 0.85rem;
-            outline: none;
-            font-family: 'Cairo', sans-serif;
-        }
-
-        .form-input:focus, .form-textarea:focus {
-            border-color: var(--gold-primary);
-        }
-
-        .ai-comparison-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 12px;
-            margin-top: 15px;
-        }
-
-        .phone-card {
-            background: var(--bg-card);
-            border-radius: 14px;
-            padding: 18px;
-            border: 1px solid var(--border-gold);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .phone-header {
-            text-align: center;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-            padding-bottom: 12px;
-            margin-bottom: 12px;
-        }
-
-        .phone-header h2 {
-            margin: 0;
-            color: var(--gold-bright);
-            font-size: 1.15rem;
-        }
-
-        .spec-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 9px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            font-size: 0.78rem;
-        }
-
-        .spec-label {
-            font-weight: bold;
-            color: var(--text-secondary);
-        }
-
-        .spec-value {
-            text-align: left;
-            font-weight: 500;
-            color: #f1f5f9;
-            max-width: 60%;
-        }
-
-        .ai-summary {
-            background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(16,185,129,0.08));
-            border: 1px solid var(--border-gold);
-            border-radius: 14px;
-            padding: 18px;
-            margin-top: 15px;
-        }
-
-        .ai-summary h3 {
-            margin-top: 0;
-            color: var(--gold-bright);
-            font-size: 1rem;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .ai-summary p {
-            color: #cbd5e1;
-            font-size: 0.85rem;
-            line-height: 1.7;
-        }
-
-        .spinner {
-            width: 32px;
-            height: 32px;
-            border: 3px solid rgba(212, 175, 55, 0.2);
-            border-top: 3px solid var(--gold-primary);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 12px auto;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .loading-state {
-            text-align: center;
-            padding: 25px 0;
-            color: var(--text-secondary);
-            font-size: 0.8rem;
-        }
-
         /* قسم الصيانة المباشرة */
         .maintenance-box {
             background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(16,185,129,0.08));
@@ -633,6 +482,22 @@
             border-color: var(--gold-primary);
         }
 
+        .form-input, .form-textarea {
+            width: 100%;
+            background: var(--bg-obsidian);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 10px;
+            padding: 12px;
+            color: #fff;
+            font-size: 0.85rem;
+            outline: none;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            border-color: var(--gold-primary);
+        }
+
         /* نافذة تسجيل الدخول */
         #loginModal {
             position: fixed;
@@ -662,6 +527,215 @@
             float: left;
             font-size: 1.1rem;
             cursor: pointer;
+        }
+
+        /* قسم مقارنة الأجهزة */
+        .compare-section {
+            margin: 0 16px 24px;
+        }
+
+        .compare-tabs {
+            display: flex;
+            gap: 6px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            margin-bottom: 4px;
+            scrollbar-width: none;
+        }
+
+        .compare-tabs::-webkit-scrollbar {
+            display: none;
+        }
+
+        .compare-tab {
+            background: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            color: var(--text-secondary);
+            padding: 7px 12px;
+            border-radius: 20px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+
+        .compare-tab.active {
+            background: var(--gold-primary);
+            color: #080a0f;
+            border-color: var(--gold-primary);
+        }
+
+        .compare-wrap {
+            overflow-x: auto;
+            border: 1px solid var(--border-gold);
+            border-radius: 16px;
+            background: var(--bg-card);
+        }
+
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 520px;
+        }
+
+        .compare-table th, .compare-table td {
+            padding: 10px 12px;
+            font-size: 0.74rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            white-space: nowrap;
+        }
+
+        .compare-table th {
+            background: var(--bg-card-alt);
+            color: var(--gold-bright);
+            font-weight: 800;
+            position: sticky;
+            top: 0;
+        }
+
+        .compare-table td:first-child, .compare-table th:first-child {
+            position: sticky;
+            right: 0;
+            background: var(--bg-card-alt);
+            text-align: right;
+            color: var(--gold-bright);
+            font-weight: 700;
+            z-index: 2;
+        }
+
+        .compare-table th:first-child {
+            z-index: 3;
+        }
+
+        .compare-table td {
+            color: #fff;
+        }
+
+        .compare-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .compare-device-name {
+            font-size: 0.76rem;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .compare-device-type {
+            display: inline-block;
+            margin-top: 3px;
+            font-size: 0.62rem;
+            font-weight: 700;
+            padding: 2px 7px;
+            border-radius: 8px;
+        }
+
+        .type-original {
+            background: rgba(16, 185, 129, 0.18);
+            color: #34d399;
+        }
+
+        .type-copy {
+            background: rgba(212, 175, 55, 0.18);
+            color: var(--gold-bright);
+        }
+
+        .compare-hint {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        .compare-order-row {
+            display: flex;
+            gap: 8px;
+            padding: 12px;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .compare-order-row::-webkit-scrollbar {
+            display: none;
+        }
+
+        .compare-order-btn {
+            flex: 0 0 auto;
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid var(--border-gold);
+            color: var(--gold-bright);
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 6px 10px;
+            border-radius: 8px;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+
+        .compare-form-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 14px;
+        }
+
+        .compare-form-desc {
+            font-size: 0.76rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .compare-inputs-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .compare-input {
+            flex: 1;
+        }
+
+        .compare-vs {
+            font-size: 0.72rem;
+            font-weight: 800;
+            color: var(--gold-primary);
+            flex: 0 0 auto;
+        }
+
+        .compare-btn {
+            width: 100%;
+        }
+
+        .compare-status {
+            text-align: center;
+            font-size: 0.78rem;
+            color: var(--gold-bright);
+            margin-top: 10px;
+            min-height: 1em;
+        }
+
+        .compare-status.error {
+            color: #ef4444;
+        }
+
+        .compare-loader {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-top-color: var(--gold-primary);
+            border-radius: 50%;
+            animation: compareSpin 0.8s linear infinite;
+            vertical-align: middle;
+            margin-left: 6px;
+        }
+
+        @keyframes compareSpin {
+            to { transform: rotate(360deg); }
         }
 
         /* قسم المعرض والمنشورات */
@@ -845,7 +919,7 @@
                 <span>وصيانة فورية بضمان حقيقي</span>
             </h1>
             <p class="hero-desc">
-                متجر برو ماكس في أعزاز يوفر تشكيلة واسعة من الهواتف الجديدة، المستعملة، ونسخ الكوبي الفاخرة، مع جميع الإكسسوارات الحديثة، وقسم صيانة مباشر بأعلى كفاءة.
+                متجر برو ماكس في أعزاز يوفر تشكيلة واسعة من الهواتف الجديدة، المستعملة، ونسخ الكوبي الفاخرة (بما فيها S26 Ultra نسخ 1 تيرا / 12 غيغا)، مع جميع الإكسسوارات الحديثة، وقسم صيانة مباشر بأعلى كفاءة.
             </p>
 
             <div class="hero-features">
@@ -877,7 +951,7 @@
         <div class="quick-nav-bar">
             <a href="#original-devices" class="quick-nav-btn">أجهزة أصلية (جديد/مستعمل)</a>
             <a href="#copy-devices" class="quick-nav-btn">أجهزة كوبي (Copy)</a>
-            <a href="#compare-section" class="quick-nav-btn">مقارنة الذكاء الاصطناعي</a>
+            <a href="#compare-section" class="quick-nav-btn">مقارنة ذكية AI</a>
             <a href="#accessories-section" class="quick-nav-btn">الإكسسوارات الحديثة</a>
             <a href="#maintenance-section" class="quick-nav-btn">الصيانة المباشرة</a>
             <a href="#location-section" class="quick-nav-btn">الموقع المباشر</a>
@@ -915,6 +989,58 @@
                     </div>
                 </div>
             </div>
+
+            <div class="device-card">
+                <span class="card-badge-tag">أصلي - ضمان</span>
+                <img src="https://images.unsplash.com/photo-1592286927505-1def25115558?w=500" alt="iPhone 14" class="device-card-img">
+                <div class="device-card-body">
+                    <div class="device-card-title">iPhone 14 (أصلي)</div>
+                    <div class="device-card-desc">سعة 128GB - كاميرا مزدوجة 12MP - بطارية بصحة ممتازة.</div>
+                    <div class="device-card-footer">
+                        <span class="device-card-price">متوفر</span>
+                        <button class="order-item-btn" onclick="quickOrder('iPhone 14 أصلي')">اطلب الآن</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="device-card">
+                <span class="card-badge-tag">جديد - ضمان</span>
+                <img src="https://images.unsplash.com/photo-1610792516307-ea5acd9c3b00?w=500" alt="Samsung Galaxy A55" class="device-card-img">
+                <div class="device-card-body">
+                    <div class="device-card-title">Samsung Galaxy A55 (أصلي جديد)</div>
+                    <div class="device-card-desc">شاشة Super AMOLED 120Hz - كاميرا 50MP OIS - حماية IP67.</div>
+                    <div class="device-card-footer">
+                        <span class="device-card-price">متوفر</span>
+                        <button class="order-item-btn" onclick="quickOrder('Samsung Galaxy A55 أصلي')">اطلب الآن</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="device-card">
+                <span class="card-badge-tag">جديد - ضمان</span>
+                <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?w=500" alt="Xiaomi Poco X6" class="device-card-img">
+                <div class="device-card-body">
+                    <div class="device-card-title">Xiaomi Poco X6 (أصلي جديد)</div>
+                    <div class="device-card-desc">معالج Dimensity قوي - شاشة AMOLED 120Hz - شحن سريع 67W.</div>
+                    <div class="device-card-footer">
+                        <span class="device-card-price">متوفر</span>
+                        <button class="order-item-btn" onclick="quickOrder('Xiaomi Poco X6 أصلي')">اطلب الآن</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="device-card">
+                <span class="card-badge-tag">مستعمل - فحص كامل</span>
+                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500" alt="iPhone 12" class="device-card-img">
+                <div class="device-card-body">
+                    <div class="device-card-title">iPhone 12 (أصلي مستعمل)</div>
+                    <div class="device-card-desc">سعة 64/128GB - فحص فني كامل - بطارية أعلى من 85%.</div>
+                    <div class="device-card-footer">
+                        <span class="device-card-price">سعر مناسب</span>
+                        <button class="order-item-btn" onclick="quickOrder('iPhone 12 أصلي مستعمل')">اطلب الآن</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- 2. قسم أجهزة الكوبي (Copy / النسخ المطابقة) -->
@@ -948,64 +1074,99 @@
                     </div>
                 </div>
             </div>
+
+            <div class="device-card">
+                <span class="card-badge-tag">512GB | 8GB RAM</span>
+                <img src="https://images.unsplash.com/photo-1533228876829-65c94e7b5025?w=500" alt="iPhone 14 Pro Max Copy" class="device-card-img">
+                <div class="device-card-body">
+                    <div class="device-card-title">iPhone 14 Pro Max (كوبي Dynamic Island)</div>
+                    <div class="device-card-desc">يدعم Dynamic Island الحقيقي على الشاشة - كاميرا تريبل مطابقة شكلياً.</div>
+                    <div class="device-card-footer">
+                        <span class="device-card-price">سعر مميز</span>
+                        <button class="order-item-btn" onclick="quickOrder('iPhone 14 Pro Max كوبي')">اطلب الآن</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="device-card">
+                <span class="card-badge-tag">1 تيرا | 16GB RAM</span>
+                <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?w=500" alt="Samsung S24 Ultra Copy" class="device-card-img">
+                <div class="device-card-body">
+                    <div class="device-card-title">Samsung Galaxy S24 Ultra (كوبي مع قلم S-Pen)</div>
+                    <div class="device-card-desc">هيكل حواف مسطحة مطابق - يأتي مع قلم S-Pen وظيفي - شاشة منحنية.</div>
+                    <div class="device-card-footer">
+                        <span class="device-card-price">سعر مميز</span>
+                        <button class="order-item-btn" onclick="quickOrder('Samsung S24 Ultra كوبي مع قلم')">اطلب الآن</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="device-card">
+                <span class="card-badge-tag">كوبي فولد</span>
+                <img src="https://images.unsplash.com/photo-1592286927505-1def25115558?w=500" alt="Fold Copy" class="device-card-img">
+                <div class="device-card-body">
+                    <div class="device-card-title">Galaxy Z Fold (كوبي قابل للطي)</div>
+                    <div class="device-card-desc">مفصلة طي حقيقية وشاشتين تعملان بشكل متزامن - تصميم جذاب ومميز.</div>
+                    <div class="device-card-footer">
+                        <span class="device-card-price">سعر مميز</span>
+                        <button class="order-item-btn" onclick="quickOrder('Galaxy Z Fold كوبي')">اطلب الآن</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="device-card">
+                <span class="card-badge-tag">اقتصادي</span>
+                <img src="https://images.unsplash.com/photo-1605236453806-6ff36851218e?w=500" alt="iPhone 13 Copy" class="device-card-img">
+                <div class="device-card-body">
+                    <div class="device-card-title">iPhone 13 (كوبي اقتصادي)</div>
+                    <div class="device-card-desc">خيار موفّر بمظهر مطابق للأصلي، مناسب لمن يريد الشكل بسعر أقل.</div>
+                    <div class="device-card-footer">
+                        <span class="device-card-price">سعر اقتصادي</span>
+                        <button class="order-item-btn" onclick="quickOrder('iPhone 13 كوبي اقتصادي')">اطلب الآن</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!-- مقارنة الأجهزة بالذكاء الاصطناعي (Gemini Engine) -->
+        <!-- مقارنة ذكية بالذكاء الاصطناعي (بحث مباشر عبر الإنترنت) -->
         <div class="section-header" id="compare-section">
-            <div class="section-tag">مقارنة ذكية لحظية</div>
-            <h2 class="section-heading">محرك المقارنة الذكي بالذكاء الاصطناعي</h2>
+            <div class="section-tag">مقارنة ذكية فورية</div>
+            <h2 class="section-heading">قارن بين أي منتجين بالذكاء الاصطناعي</h2>
         </div>
         <div class="compare-section">
             <div class="compare-form-card">
-                <p class="compare-form-desc">اكتب اسم أي هاتفين في الأسفل ودع الذكاء الاصطناعي يجلب المواصفات ويقارن بينهما لحظياً</p>
+                <p class="compare-form-desc">اكتب اسم أي منتجين (هاتف، ساعة ذكية، سماعة، باور بانك، إكسسوار...) وسيقارن الذكاء الاصطناعي مواصفاتهما فوراً من الإنترنت.</p>
                 <div class="compare-inputs-row">
-                    <input type="text" id="phoneInput1" class="form-input compare-input" placeholder="مثال: Samsung Galaxy A56">
+                    <input type="text" id="deviceOneInput" class="form-input compare-input" placeholder="مثال: iPhone 15 Pro Max">
                     <span class="compare-vs">VS</span>
-                    <input type="text" id="phoneInput2" class="form-input compare-input" placeholder="مثال: Infinix Note 60 Pro">
+                    <input type="text" id="deviceTwoInput" class="form-input compare-input" placeholder="مثال: Samsung S24 Ultra">
                 </div>
-                <!-- حقل إدخال مفتاح API محلياً من قبل المستخدم دون حفظه بالكود -->
-                <div class="form-group" style="margin-bottom: 10px;">
-                    <input type="password" id="customApiKeyInput" class="form-input" placeholder="ضع مفتاح Gemini API الخاص بك هنا مؤقتاً (اختياري)">
-                </div>
-                <button type="button" class="btn-primary compare-btn" onclick="startAIComparison()">
-                    <i class="fa-solid fa-magnifying-glass"></i> مقارنة الآن عبر الذكاء الاصطناعي
+                <button type="button" class="btn-primary compare-btn" onclick="compareDevicesAI()">
+                    <i class="fa-solid fa-bolt"></i> قارن الآن بالذكاء الاصطناعي
                 </button>
+                <div id="compareStatus" class="compare-status"></div>
             </div>
 
-            <div class="ai-comparison-grid">
-                <div class="phone-card" id="card1">
-                    <div class="phone-header">
-                        <h2>الهاتف الأول</h2>
-                    </div>
-                    <div id="specs1" class="loading-state">بانتظار الإدخال...</div>
-                </div>
-
-                <div class="phone-card" id="card2">
-                    <div class="phone-header">
-                        <h2>الهاتف الثاني</h2>
-                    </div>
-                    <div id="specs2" class="loading-state">بانتظار الإدخال...</div>
-                </div>
-
-                <div class="ai-summary" id="aiSummaryBox" style="display: none;">
-                    <h3>🤖 الخلاصة والتحليل الذكي</h3>
-                    <p id="aiSummaryText"></p>
-                </div>
+            <div class="compare-wrap" id="compareResultWrap" style="display:none;">
+                <table class="compare-table" id="compareTable"></table>
             </div>
+            <p class="compare-hint" id="compareHint" style="display:none;">المواصفات مجمّعة تلقائياً من مصادر عامة على الإنترنت وقد تختلف قليلاً حسب الإصدار - ننصح بمعاينة الجهاز مباشرة بالمحل قبل الشراء.</p>
+
+            <div class="compare-order-row" id="compareOrderRow" style="display:none;"></div>
         </div>
 
         <!-- 3. قسم الإكسسوارات الحديثة بالكامل -->
         <div class="section-header" id="accessories-section">
-            <div class="section-tag">الملحقات والإكسسوارات</div>
-            <h2 class="section-heading">أحدث الإكسسوارات والشواحن الأصلية</h2>
+            <div class="section-tag">تشكيلة بروماكس المميزة</div>
+            <h2 class="section-heading">إكسسوارات أصلية بمعايير احترافية</h2>
         </div>
         <div class="devices-grid">
             <div class="device-card">
-                <span class="card-badge-tag">أصلي PD</span>
+                <span class="card-badge-tag">الأكثر مبيعاً</span>
                 <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=500" alt="شواحن جدارية سريعة" class="device-card-img">
                 <div class="device-card-body">
                     <div class="device-card-title">شواحن جدارية سريعة (PD / GaN)</div>
-                    <div class="device-card-desc">شواحن 20W - 65W مع كابلات تايب سي أصلية معتمدة لحماية البطارية.</div>
+                    <div class="device-card-desc">تقنية GaN المتطورة بقدرة 20W حتى 65W، مع كابلات Type-C مضفرة أصلية معتمدة، حماية ذكية من الحرارة الزائدة وقصر التيار لإطالة عمر بطاريتك.</div>
                     <div class="device-card-footer">
                         <span class="device-card-price">متوفر</span>
                         <button class="order-item-btn" onclick="quickOrder('شاحن جداري سريع GaN')">اطلب الآن</button>
@@ -1014,11 +1175,11 @@
             </div>
 
             <div class="device-card">
-                <span class="card-badge-tag">صوت نقي</span>
+                <span class="card-badge-tag">صوت نقي Hi-Fi</span>
                 <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500" alt="سماعات لاسلكية" class="device-card-img">
                 <div class="device-card-body">
-                    <div class="device-card-title">سماعات لاسلكية (AirPods / TWS)</div>
-                    <div class="device-card-desc">سماعات بلوتوث بنقاء صوت عالي وعزل ضوضاء ANC وبطارية طويلة.</div>
+                    <div class="device-card-title">سماعات لاسلكية (AirPods / TWS Pro)</div>
+                    <div class="device-card-desc">اتصال بلوتوث 5.3 مستقر، عزل ضوضاء نشط ANC، جهير عميق ووضوح عالي في المكالمات، علبة شحن لاسلكية تدوم حتى 30 ساعة تشغيل.</div>
                     <div class="device-card-footer">
                         <span class="device-card-price">متوفر</span>
                         <button class="order-item-btn" onclick="quickOrder('سماعات لاسلكية TWS')">اطلب الآن</button>
@@ -1027,11 +1188,11 @@
             </div>
 
             <div class="device-card">
-                <span class="card-badge-tag">حماية</span>
+                <span class="card-badge-tag">حماية 9H</span>
                 <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=500" alt="واقيات شاشة نانو" class="device-card-img">
                 <div class="device-card-body">
                     <div class="device-card-title">واقيات شاشة (نانو سيراميك / حراري)</div>
-                    <div class="device-card-desc">حماية شاملة ضد الكسر والخدوش مع تركيب احترافي مجاني بالمحل.</div>
+                    <div class="device-card-desc">صلابة تصل إلى 9H مقاومة للكسر والخدش، شفافية 99.9% تحافظ على جودة الشاشة الأصلية، تركيب احترافي بدون فقاعات مجاناً في المحل.</div>
                     <div class="device-card-footer">
                         <span class="device-card-price">متوفر</span>
                         <button class="order-item-btn" onclick="quickOrder('واقي شاشة نانو سيراميك')">اطلب الآن</button>
@@ -1044,10 +1205,75 @@
                 <img src="https://images.unsplash.com/photo-1609592235391-d49e102f9e4f?w=500" alt="باور بانك" class="device-card-img">
                 <div class="device-card-body">
                     <div class="device-card-title">باور بانك (10,000 / 20,000 mAh)</div>
-                    <div class="device-card-desc">شحن سريع MagSafe أو عبر المنافذ المتعددة بتصميم أنيق وصغير.</div>
+                    <div class="device-card-desc">شحن سريع ثنائي الاتجاه عبر MagSafe أو منافذ USB-C/USB-A متعددة، هيكل مقاوم للصدمات بتصميم أنيق يناسب الحقيبة والجيب.</div>
                     <div class="device-card-footer">
                         <span class="device-card-price">متوفر</span>
                         <button class="order-item-btn" onclick="quickOrder('باور بانك سريع')">اطلب الآن</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="device-card">
+                <span class="card-badge-tag">ساعات ذكية</span>
+                <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=500" alt="ساعات ذكية" class="device-card-img">
+                <div class="device-card-body">
+                    <div class="device-card-title">ساعات ذكية Ultra / Smartwatch</div>
+                    <div class="device-card-desc">شاشة AMOLED عالية السطوع تُقرأ بوضوح تحت الشمس، مراقبة نبض القلب والأكسجين والنوم، مكالمات بلوتوث مباشرة، مقاومة كاملة للماء والغبار.</div>
+                    <div class="device-card-footer">
+                        <span class="device-card-price">متوفر</span>
+                        <button class="order-item-btn" onclick="quickOrder('ساعة ذكية Ultra')">اطلب الآن</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="device-card">
+                <span class="card-badge-tag">كفرات وأغطية</span>
+                <img src="https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=500" alt="كفرات حماية" class="device-card-img">
+                <div class="device-card-body">
+                    <div class="device-card-title">كفرات حماية فاخرة & MagSafe</div>
+                    <div class="device-card-desc">تشكيلة واسعة من الجلد الفاخر والسيليكون الفرنسي المضاد للصدمات، مغناطيس MagSafe أصلي بقوة تثبيت ممتازة وألوان عصرية متجددة أسبوعياً.</div>
+                    <div class="device-card-footer">
+                        <span class="device-card-price">متوفر</span>
+                        <button class="order-item-btn" onclick="quickOrder('كفر حماية MagSafe')">اطلب الآن</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="device-card">
+                <span class="card-badge-tag">شحن لاسلكي</span>
+                <img src="https://images.unsplash.com/photo-1591290619762-d381ff2b7a89?w=500" alt="شاحن لاسلكي" class="device-card-img">
+                <div class="device-card-body">
+                    <div class="device-card-title">شاحن لاسلكي 3-في-1 (MagSafe Stand)</div>
+                    <div class="device-card-desc">يشحن الهاتف والساعة والسماعات معاً بترتيب أنيق على المكتب، تصميم قابل للطي مثالي للسفر، حماية ذكية من الحرارة الزائدة.</div>
+                    <div class="device-card-footer">
+                        <span class="device-card-price">متوفر</span>
+                        <button class="order-item-btn" onclick="quickOrder('شاحن لاسلكي 3 في 1')">اطلب الآن</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="device-card">
+                <span class="card-badge-tag">للسيارة</span>
+                <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=500" alt="حامل سيارة" class="device-card-img">
+                <div class="device-card-body">
+                    <div class="device-card-title">حامل هاتف للسيارة (شحن مغناطيسي)</div>
+                    <div class="device-card-desc">تثبيت قوي على فتحة التكييف أو الزجاج، ذراع قابل للتدوير 360 درجة، بعض الموديلات تدعم الشحن اللاسلكي أثناء القيادة.</div>
+                    <div class="device-card-footer">
+                        <span class="device-card-price">متوفر</span>
+                        <button class="order-item-btn" onclick="quickOrder('حامل هاتف للسيارة')">اطلب الآن</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="device-card">
+                <span class="card-badge-tag">جودة استوديو</span>
+                <img src="https://images.unsplash.com/photo-1613040809024-b4ef7ba99bc3?w=500" alt="مايكروفون وعدسات" class="device-card-img">
+                <div class="device-card-body">
+                    <div class="device-card-title">مايكروفون لايفل + عدسات إضافية للجوال</div>
+                    <div class="device-card-desc">مايكروفون لاسلكي بجودة استوديو لصناعة المحتوى، بالإضافة لعدسات ماكرو وواسعة الزاوية تضاف على كاميرا هاتفك بثوانٍ.</div>
+                    <div class="device-card-footer">
+                        <span class="device-card-price">متوفر</span>
+                        <button class="order-item-btn" onclick="quickOrder('مايكروفون وعدسات جوال')">اطلب الآن</button>
                     </div>
                 </div>
             </div>
@@ -1056,7 +1282,7 @@
         <!-- 4. قسم الصيانة المباشرة -->
         <div class="maintenance-box" id="maintenance-section">
             <div class="section-tag" style="text-align: center;">خدمات الصيانة</div>
-            <h3 style="color: #fff; font-size: 1.2rem; text-align: center;">قسم الصيانة المباشرة (فحص فوري في نفس اليوم)</h3>
+            <h3 class="why-title" style="color: #fff; font-size: 1.2rem; text-align: center;">قسم الصيانة المباشرة (فحص فوري في نفس اليوم)</h3>
             <p style="color: var(--text-secondary); font-size: 0.78rem; text-align: center; margin-bottom: 8px;">فريق تقني متخصص بتبديل القطع وحل كافة أعطال الهواتف</p>
 
             <div class="maintenance-list">
@@ -1098,6 +1324,7 @@
             <p style="color: var(--text-secondary); font-size: 0.76rem;">زورنا في مركز المدينة لخدمتكم بشكل مباشر</p>
 
             <div class="location-info">
+                <!-- خريطة جوجل المدمجة لمنطقة أعزاز -->
                 <div style="width: 100%; height: 180px; border-radius: 12px; overflow: hidden; margin: 10px 0; border: 1px solid var(--border-gold);">
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51655.61793740263!2d37.0097727!3d36.5866164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1525e98a3c00f7ad%3A0xc3c51ee601f78684!2z2KfZhNmF2LHYp9mG2Iwg2LHQsNC32LTZgA!5e0!3m2!1sar!2s!4v1700000000000!5m2!1sar!2s" 
@@ -1122,10 +1349,15 @@
                     <i class="fa-solid fa-phone"></i>
                     <span><strong>رقم التواصل المباشر:</strong> +905314531305</span>
                 </div>
+                <div style="margin-top: 8px;">
+                    <a href="https://maps.app.goo.gl/AZAZ_LINK_HERE" target="_blank" class="btn-primary" style="padding: 10px; font-size: 0.85rem; text-align: center;">
+                        <i class="fa-solid fa-map-location-dot"></i> فتح الموقع عبر تطبيق خرائط جوجل
+                    </a>
+                </div>
             </div>
         </div>
 
-        <!-- 6. قسم المعرض والمنشورات -->
+        <!-- 6. قسم المعرض والمنشورات (إضافة صور مباشرة من الموقع) -->
         <div class="section-header" id="gallery-section">
             <div class="section-tag">أضف من الموقع مباشرة</div>
             <h2 class="section-heading">المعرض والمنشورات</h2>
@@ -1137,6 +1369,10 @@
             </div>
 
             <div id="galleryAdminForm" style="display:none;">
+                <div class="gallery-hint-box" id="galleryApiHint">
+                    <strong>إعداد لمرة واحدة:</strong> لتفعيل الرفع الحقيقي أنشئ حساب مجاني على <strong>api.imgbb.com</strong> واحصل على API Key، ثم ضعه في الكود بمكان <code>IMGBB_API_KEY</code> بالأعلى. بعدها ستتمكن من رفع الصور مباشرة من جهازك.
+                </div>
+
                 <div class="form-group">
                     <label class="form-label">نوع المنشور</label>
                     <div class="gallery-post-types">
@@ -1225,8 +1461,8 @@
             <h3 style="color: #fff; margin-bottom: 5px;">حساب المستخدم / الزائر</h3>
             <p style="color: var(--text-secondary); font-size: 0.75rem; margin-bottom: 15px;">يمكنك تسجيل الدخول بحسابك أو المتابعة كزائر</p>
             
-            <input type="text" id="usernameInput" placeholder="اسم المستخدم (mahmood)" style="width: 100%; padding: 10px; margin-bottom: 10px; background: #080a0f; border: 1px solid #444; color: #fff; border-radius: 8px;">
-            <input type="password" id="passwordInput" placeholder="كلمة المرور (maystro)" style="width: 100%; padding: 10px; margin-bottom: 15px; background: #080a0f; border: 1px solid #444; color: #fff; border-radius: 8px;">
+            <input type="text" id="usernameInput" placeholder="اسم المستخدم" style="width: 100%; padding: 10px; margin-bottom: 10px; background: #080a0f; border: 1px solid #444; color: #fff; border-radius: 8px;">
+            <input type="password" id="passwordInput" placeholder="كلمة المرور" style="width: 100%; padding: 10px; margin-bottom: 15px; background: #080a0f; border: 1px solid #444; color: #fff; border-radius: 8px;">
             
             <button onclick="loginUser()" class="btn-primary" style="width: 100%; margin-bottom: 8px; padding: 10px;">تسجيل الدخول</button>
             <button onclick="loginAsGuest()" class="btn-outline" style="width: 100%; padding: 10px;">دخول كزائر</button>
@@ -1235,7 +1471,8 @@
     </div>
 
     <script>
-        const IMGBB_API_KEY = "ضع_مفتاح_imgbb_هنا_إن_أردت";
+        // ضع مفتاح imgbb هنا لتفعيل رفع الصور الحقيقي (احصل عليه مجاناً من api.imgbb.com)
+        const IMGBB_API_KEY = "5a02487419763f7373f2a8e11bb2c4cf";
 
         function openLoginModal() {
             document.getElementById('loginModal').style.display = 'flex';
@@ -1260,19 +1497,35 @@
         function updateAdminUI() {
             document.getElementById('galleryLockedMsg').style.display = isAdmin ? 'none' : 'block';
             document.getElementById('galleryAdminForm').style.display = isAdmin ? 'block' : 'none';
+            const apiHint = document.getElementById('galleryApiHint');
+            if (apiHint) {
+                const configured = IMGBB_API_KEY && IMGBB_API_KEY !== 'ضع_مفتاحك_هنا';
+                apiHint.style.display = configured ? 'none' : 'block';
+            }
         }
 
-        function loginUser() {
+        // تجزئة (hash) بيانات دخول المدير بدل تخزينها كنص واضح في الكود
+        const ADMIN_CRED_HASH = "3c5026307ae08318651bd92cf77aae11dd2a202842afd757a79c5a5db6376ea5";
+
+        async function sha256Hex(text) {
+            const enc = new TextEncoder().encode(text);
+            const buf = await crypto.subtle.digest('SHA-256', enc);
+            return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+
+        async function loginUser() {
             const user = document.getElementById('usernameInput').value.trim();
             const pass = document.getElementById('passwordInput').value.trim();
             const errorMsg = document.getElementById('loginError');
 
-            if (user.toLowerCase() === 'mahmood' && pass === 'maystro') {
+            const hash = await sha256Hex(user.toLowerCase() + ':' + pass);
+
+            if (hash === ADMIN_CRED_HASH) {
                 isAdmin = true;
                 document.getElementById('currentUserBadge').innerText = user;
                 updateAdminUI();
                 closeLoginModal();
-                alert('أهلاً بك يا ' + user + ' - يمكنك الآن إضافة صور ومنشورات من قسم "المعرض والمنشورات"');
+                alert('أهلاً بك - يمكنك الآن إضافة صور ومنشورات من قسم "المعرض والمنشورات"');
             } else {
                 errorMsg.style.display = 'block';
             }
@@ -1291,110 +1544,101 @@
             return div.innerHTML;
         }
 
-        async function startAIComparison() {
-            const phone1 = document.getElementById('phoneInput1').value.trim();
-            const phone2 = document.getElementById('phoneInput2').value.trim();
-            const apiKey = document.getElementById('customApiKeyInput').value.trim();
+        async function compareDevicesAI() {
+            const deviceOne = document.getElementById('deviceOneInput').value.trim();
+            const deviceTwo = document.getElementById('deviceTwoInput').value.trim();
+            const statusEl = document.getElementById('compareStatus');
+            const resultWrap = document.getElementById('compareResultWrap');
+            const hintEl = document.getElementById('compareHint');
+            const orderRow = document.getElementById('compareOrderRow');
 
-            if (!phone1 || !phone2) {
-                alert('يرجى كتابة اسم الهاتفين معاً لإجراء المقارنة.');
+            if (!deviceOne || !deviceTwo) {
+                statusEl.className = 'compare-status error';
+                statusEl.innerText = 'الرجاء إدخال اسم المنتجين أولاً.';
                 return;
             }
 
-            if (!apiKey) {
-                alert('يرجى إدخال مفتاح Gemini API في الحقل المخصص أعلاه لإجراء المقارنة.');
-                return;
-            }
+            statusEl.className = 'compare-status';
+            statusEl.innerHTML = 'الذكاء الاصطناعي يقارن الآن...<span class="compare-loader"></span>';
+            resultWrap.style.display = 'none';
+            hintEl.style.display = 'none';
+            orderRow.style.display = 'none';
 
-            const loadingHTML = `
-                <div class="spinner"></div>
-                <p>جاري البحث وجلب البيانات عبر الذكاء الاصطناعي...</p>
-            `;
-
-            document.getElementById('specs1').innerHTML = loadingHTML;
-            document.getElementById('specs2').innerHTML = loadingHTML;
-            document.getElementById('aiSummaryBox').style.display = 'none';
-
-            const prompt = `
-            أنت خبير تقني ومحلل هواتف ذكية. قم بالبحث وتحليل جهازين هما:
-            1. ${phone1}
-            2. ${phone2}
-
-            أعطني الرد حصراً بصيغة JSON صحيحة تحتوي على المفاتيح التالية دون أي نص زائد خارج الجيسون:
-            {
-              "phone1": {
-                "name": "الاسم الكامل",
-                "screen": "المواصفات",
-                "processor": "المعالج",
-                "ram": "الرام",
-                "storage": "التخزين",
-                "camera": "الكاميرات",
-                "battery": "البطارية",
-                "os": "النظام"
-              },
-              "phone2": {
-                "name": "الاسم الكامل",
-                "screen": "المواصفات",
-                "processor": "المعالج",
-                "ram": "الرام",
-                "storage": "التخزين",
-                "camera": "الكاميرات",
-                "battery": "البطارية",
-                "os": "النظام"
-              },
-              "summary": "فقرة موجزة تقارن فيها أيهما أفضل ولماذا باختصار شديد باللغة العربية"
-            }
-            `;
+            // برومبت عام يدعم أي نوع منتج تقني (هاتف، ساعة، سماعة، إكسسوار...) مع تعليمات لبحث سريع ومختصر
+            const prompt = `أنت مساعد مقارنة منتجات تقنية سريع. قارن بين: "${deviceOne}" و "${deviceTwo}" (قد يكونا هاتفين، ساعتين ذكيتين، سماعتين، أو أي إكسسوار تقني آخر - حدد نوعهما تلقائياً).
+افحص المنتجين بسرعة (بحث واحد أو اثنين كحد أقصى لكل منتج) ثم أجب فوراً.
+أجب حصراً بكائن JSON صالح دون أي نص إضافي أو علامات markdown، بهذا الشكل بالضبط:
+{
+  "category": "نوع المنتجين (مثال: هواتف ذكية / ساعات ذكية / سماعات)",
+  "device1": {"name": "الاسم الكامل"},
+  "device2": {"name": "الاسم الكامل"},
+  "specs": [
+    {"label": "اسم المواصفة", "value1": "قيمة المنتج الأول", "value2": "قيمة المنتج الثاني"}
+  ]
+}
+اختر بنفسك أنسب 7 إلى 10 مواصفات لنوع هذا المنتج تحديداً (مثلاً للهواتف: الشاشة، المعالج، الرام، التخزين، الكاميرا، البطارية؛ وللساعات: الشاشة، البطارية، مقاومة الماء، المستشعرات؛ وللسماعات: نوع الاتصال، عزل الضوضاء، مدة البطارية). اكتب كل القيم بالعربية وبإيجاز شديد (أقل من 10 كلمات لكل قيمة). إذا لم تجد المنتج، اكتب "غير متوفر".`;
 
             try {
-                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
+                const response = await fetch("https://api.anthropic.com/v1/messages", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
-                        contents: [{ parts: [{ text: prompt }] }],
-                        generationConfig: { responseMimeType: "application/json" }
+                        model: "claude-sonnet-4-6",
+                        max_tokens: 1200,
+                        messages: [{ role: "user", content: prompt }],
+                        tools: [{ type: "web_search_20250305", name: "web_search" }]
                     })
                 });
 
-                if (!response.ok) {
-                    throw new Error('فشل الاتصال بخدمة الذكاء الاصطناعي، تأكد من صحة المفتاح');
-                }
-
                 const data = await response.json();
-                const resultText = data.candidates[0].content.parts[0].text;
-                const parsed = JSON.parse(resultText);
+                const textBlocks = (data.content || [])
+                    .filter(block => block.type === 'text')
+                    .map(block => block.text)
+                    .join('\n');
 
-                renderCard('specs1', parsed.phone1);
-                renderCard('specs2', parsed.phone2);
+                const cleaned = textBlocks.replace(/```json|```/g, '').trim();
+                const jsonMatch = cleaned.match(/\{[\s\S]*\}/);
+                if (!jsonMatch) throw new Error('لم يتم العثور على بيانات صالحة');
 
-                document.getElementById('aiSummaryText').textContent = parsed.summary;
-                document.getElementById('aiSummaryBox').style.display = 'block';
+                const parsed = JSON.parse(jsonMatch[0]);
+                renderCompareResult(parsed);
 
-            } catch (error) {
-                console.error(error);
-                const errorHTML = '<span style="color: #ef4444; font-weight: bold;">حدث خطأ أثناء جلب البيانات. تأكد من صحة مفتاح API أو اتصال الإنترنت.</span>';
-                document.getElementById('specs1').innerHTML = errorHTML;
-                document.getElementById('specs2').innerHTML = errorHTML;
+                statusEl.className = 'compare-status';
+                statusEl.innerText = 'تمت المقارنة بنجاح ✅';
+            } catch (err) {
+                console.error('Compare error:', err);
+                statusEl.className = 'compare-status error';
+                statusEl.innerText = 'تعذّر إتمام المقارنة حالياً، حاول مرة أخرى أو تواصل معنا مباشرة عبر واتساب.';
             }
         }
 
-        function renderCard(elementId, p) {
-            const container = document.getElementById(elementId);
-            container.innerHTML = `
-                <div class="phone-header">
-                    <h2>${escapeHtml(p.name)}</h2>
-                </div>
-                <div class="spec-item"><span class="spec-label">الشاشة</span><span class="spec-value">${escapeHtml(p.screen)}</span></div>
-                <div class="spec-item"><span class="spec-label">المعالج</span><span class="spec-value">${escapeHtml(p.processor)}</span></div>
-                <div class="spec-item"><span class="spec-label">الرام</span><span class="spec-value">${escapeHtml(p.ram)}</span></div>
-                <div class="spec-item"><span class="spec-label">التخزين</span><span class="spec-value">${escapeHtml(p.storage)}</span></div>
-                <div class="spec-item"><span class="spec-label">الكاميرات</span><span class="spec-value">${escapeHtml(p.camera)}</span></div>
-                <div class="spec-item"><span class="spec-label">البطارية</span><span class="spec-value">${escapeHtml(p.battery)}</span></div>
-                <div class="spec-item"><span class="spec-label">النظام</span><span class="spec-value">${escapeHtml(p.os)}</span></div>
-                <div style="margin-top: 10px; text-align: left;">
-                    <button class="order-item-btn" onclick="quickOrder('${escapeHtml(p.name)}')">اطلب الجهاز</button>
-                </div>
-            `;
+        function renderCompareResult(result) {
+            const d1 = result.device1 || {};
+            const d2 = result.device2 || {};
+            const specs = Array.isArray(result.specs) ? result.specs : [];
+            const table = document.getElementById('compareTable');
+            const resultWrap = document.getElementById('compareResultWrap');
+            const hintEl = document.getElementById('compareHint');
+            const orderRow = document.getElementById('compareOrderRow');
+
+            let html = '<thead><tr><th>' + escapeHtml(result.category || 'المواصفة') + '</th><th><div class="compare-device-name">' +
+                escapeHtml(d1.name) + '</div></th><th><div class="compare-device-name">' +
+                escapeHtml(d2.name) + '</div></th></tr></thead><tbody>';
+
+            specs.forEach(row => {
+                html += '<tr><td>' + escapeHtml(row.label) + '</td><td>' +
+                    escapeHtml(row.value1) + '</td><td>' + escapeHtml(row.value2) + '</td></tr>';
+            });
+            html += '</tbody>';
+
+            table.innerHTML = html;
+            resultWrap.style.display = 'block';
+            hintEl.style.display = 'block';
+
+            orderRow.innerHTML =
+                '<button class="compare-order-btn" onclick="quickOrder(\'استفسار مقارنة: ' + (d1.name || '').replace(/'/g, '') + '\')">اطلب ' + escapeHtml(d1.name) + '</button>' +
+                '<button class="compare-order-btn" onclick="quickOrder(\'استفسار مقارنة: ' + (d2.name || '').replace(/'/g, '') + '\')">اطلب ' + escapeHtml(d2.name) + '</button>';
+            orderRow.style.display = 'flex';
         }
 
         async function uploadGalleryImage() {
@@ -1411,14 +1655,14 @@
                 return;
             }
 
-            if (!IMGBB_API_KEY || IMGBB_API_KEY === 'ضع_مفتاح_imgbb_هنا_إن_أردت') {
+            if (!IMGBB_API_KEY || IMGBB_API_KEY === 'ضع_مفتاحك_هنا') {
                 uploadStatus.className = 'gallery-status error';
-                uploadStatus.innerText = 'لم يتم إعداد مفتاح ImgBB بعد.';
+                uploadStatus.innerText = 'لم يتم إعداد مفتاح الرفع بعد. راجع الملاحظة أعلاه لإعداد الرفع الحقيقي.';
                 fileInput.value = '';
                 return;
             }
 
-            box.innerHTML = 'جاري رفع الصورة...<span class="spinner" style="width:20px;height:20px;"></span>';
+            box.innerHTML = 'جاري رفع الصورة...<span class="compare-loader"></span>';
             uploadStatus.className = 'gallery-status';
             uploadStatus.innerText = '';
 
