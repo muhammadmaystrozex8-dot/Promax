@@ -528,6 +528,215 @@
             font-size: 1.1rem;
             cursor: pointer;
         }
+
+        /* قسم مقارنة الأجهزة */
+        .compare-section {
+            margin: 0 16px 24px;
+        }
+
+        .compare-tabs {
+            display: flex;
+            gap: 6px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            margin-bottom: 4px;
+            scrollbar-width: none;
+        }
+
+        .compare-tabs::-webkit-scrollbar {
+            display: none;
+        }
+
+        .compare-tab {
+            background: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            color: var(--text-secondary);
+            padding: 7px 12px;
+            border-radius: 20px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+
+        .compare-tab.active {
+            background: var(--gold-primary);
+            color: #080a0f;
+            border-color: var(--gold-primary);
+        }
+
+        .compare-wrap {
+            overflow-x: auto;
+            border: 1px solid var(--border-gold);
+            border-radius: 16px;
+            background: var(--bg-card);
+        }
+
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 520px;
+        }
+
+        .compare-table th, .compare-table td {
+            padding: 10px 12px;
+            font-size: 0.74rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            white-space: nowrap;
+        }
+
+        .compare-table th {
+            background: var(--bg-card-alt);
+            color: var(--gold-bright);
+            font-weight: 800;
+            position: sticky;
+            top: 0;
+        }
+
+        .compare-table td:first-child, .compare-table th:first-child {
+            position: sticky;
+            right: 0;
+            background: var(--bg-card-alt);
+            text-align: right;
+            color: var(--gold-bright);
+            font-weight: 700;
+            z-index: 2;
+        }
+
+        .compare-table th:first-child {
+            z-index: 3;
+        }
+
+        .compare-table td {
+            color: #fff;
+        }
+
+        .compare-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .compare-device-name {
+            font-size: 0.76rem;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .compare-device-type {
+            display: inline-block;
+            margin-top: 3px;
+            font-size: 0.62rem;
+            font-weight: 700;
+            padding: 2px 7px;
+            border-radius: 8px;
+        }
+
+        .type-original {
+            background: rgba(16, 185, 129, 0.18);
+            color: #34d399;
+        }
+
+        .type-copy {
+            background: rgba(212, 175, 55, 0.18);
+            color: var(--gold-bright);
+        }
+
+        .compare-hint {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        .compare-order-row {
+            display: flex;
+            gap: 8px;
+            padding: 12px;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .compare-order-row::-webkit-scrollbar {
+            display: none;
+        }
+
+        .compare-order-btn {
+            flex: 0 0 auto;
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid var(--border-gold);
+            color: var(--gold-bright);
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 6px 10px;
+            border-radius: 8px;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+
+        .compare-form-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 14px;
+        }
+
+        .compare-form-desc {
+            font-size: 0.76rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .compare-inputs-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .compare-input {
+            flex: 1;
+        }
+
+        .compare-vs {
+            font-size: 0.72rem;
+            font-weight: 800;
+            color: var(--gold-primary);
+            flex: 0 0 auto;
+        }
+
+        .compare-btn {
+            width: 100%;
+        }
+
+        .compare-status {
+            text-align: center;
+            font-size: 0.78rem;
+            color: var(--gold-bright);
+            margin-top: 10px;
+            min-height: 1em;
+        }
+
+        .compare-status.error {
+            color: #ef4444;
+        }
+
+        .compare-loader {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-top-color: var(--gold-primary);
+            border-radius: 50%;
+            animation: compareSpin 0.8s linear infinite;
+            vertical-align: middle;
+            margin-left: 6px;
+        }
+
+        @keyframes compareSpin {
+            to { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body>
@@ -587,6 +796,7 @@
         <div class="quick-nav-bar">
             <a href="#original-devices" class="quick-nav-btn">أجهزة أصلية (جديد/مستعمل)</a>
             <a href="#copy-devices" class="quick-nav-btn">أجهزة كوبي (Copy)</a>
+            <a href="#compare-section" class="quick-nav-btn">قارن بين الأجهزة</a>
             <a href="#accessories-section" class="quick-nav-btn">الإكسسوارات الحديثة</a>
             <a href="#maintenance-section" class="quick-nav-btn">الصيانة المباشرة</a>
             <a href="#location-section" class="quick-nav-btn">الموقع المباشر</a>
@@ -656,6 +866,33 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- مقارنة الأجهزة (بحث مباشر عبر الإنترنت) -->
+        <div class="section-header" id="compare-section">
+            <div class="section-tag">قارن قبل ما تقرر</div>
+            <h2 class="section-heading">قارن بين أي جهازين عبر الإنترنت</h2>
+        </div>
+        <div class="compare-section">
+            <div class="compare-form-card">
+                <p class="compare-form-desc">اكتب اسم أي جهازين وسنجلب لك أحدث المواصفات (المعالج، الذاكرة، الكاميرا، البطارية...) تلقائياً من الإنترنت.</p>
+                <div class="compare-inputs-row">
+                    <input type="text" id="deviceOneInput" class="form-input compare-input" placeholder="الجهاز الأول: مثال iPhone 15 Pro Max">
+                    <span class="compare-vs">VS</span>
+                    <input type="text" id="deviceTwoInput" class="form-input compare-input" placeholder="الجهاز الثاني: مثال Samsung S24 Ultra">
+                </div>
+                <button type="button" class="btn-primary compare-btn" onclick="compareDevicesAI()">
+                    <i class="fa-solid fa-magnifying-glass"></i> قارن الآن عبر الإنترنت
+                </button>
+                <div id="compareStatus" class="compare-status"></div>
+            </div>
+
+            <div class="compare-wrap" id="compareResultWrap" style="display:none;">
+                <table class="compare-table" id="compareTable"></table>
+            </div>
+            <p class="compare-hint" id="compareHint" style="display:none;">المواصفات مجمّعة تلقائياً من مصادر عامة على الإنترنت وقد تختلف قليلاً حسب الإصدار - ننصح بمعاينة الجهاز مباشرة بالمحل قبل الشراء.</p>
+
+            <div class="compare-order-row" id="compareOrderRow" style="display:none;"></div>
         </div>
 
         <!-- 3. قسم الإكسسوارات الحديثة بالكامل -->
@@ -905,6 +1142,115 @@
         function loginAsGuest() {
             document.getElementById('currentUserBadge').innerText = 'زائر';
             closeLoginModal();
+        }
+
+        const compareSpecRows = [
+            { key: "screen", label: "الشاشة" },
+            { key: "processor", label: "المعالج" },
+            { key: "ram", label: "ذاكرة الوصول RAM" },
+            { key: "storage", label: "سعة التخزين" },
+            { key: "rearCamera", label: "الكاميرا الخلفية" },
+            { key: "frontCamera", label: "الكاميرا الأمامية" },
+            { key: "battery", label: "البطارية" },
+            { key: "charging", label: "الشحن" },
+            { key: "os", label: "نظام التشغيل" },
+            { key: "build", label: "الهيكل والخامة" },
+            { key: "releaseYear", label: "سنة الإصدار" },
+            { key: "approxPrice", label: "السعر التقريبي" }
+        ];
+
+        function escapeHtml(str) {
+            const div = document.createElement('div');
+            div.innerText = (str === undefined || str === null || str === '') ? '—' : str;
+            return div.innerHTML;
+        }
+
+        async function compareDevicesAI() {
+            const deviceOne = document.getElementById('deviceOneInput').value.trim();
+            const deviceTwo = document.getElementById('deviceTwoInput').value.trim();
+            const statusEl = document.getElementById('compareStatus');
+            const resultWrap = document.getElementById('compareResultWrap');
+            const hintEl = document.getElementById('compareHint');
+            const orderRow = document.getElementById('compareOrderRow');
+
+            if (!deviceOne || !deviceTwo) {
+                statusEl.className = 'compare-status error';
+                statusEl.innerText = 'الرجاء إدخال اسم الجهازين أولاً.';
+                return;
+            }
+
+            statusEl.className = 'compare-status';
+            statusEl.innerHTML = 'جاري جلب المواصفات من الإنترنت...<span class="compare-loader"></span>';
+            resultWrap.style.display = 'none';
+            hintEl.style.display = 'none';
+            orderRow.style.display = 'none';
+
+            const prompt = `ابحث في الإنترنت عن المواصفات الرسمية الحقيقية والمحدّثة لهاتفين: "${deviceOne}" و "${deviceTwo}".
+أجب حصراً بكائن JSON صالح دون أي نص إضافي أو علامات markdown، بهذا الشكل بالضبط:
+{
+  "device1": {"name": "الاسم الكامل للجهاز 1", "screen": "...", "processor": "...", "ram": "...", "storage": "...", "rearCamera": "...", "frontCamera": "...", "battery": "...", "charging": "...", "os": "...", "build": "...", "releaseYear": "...", "approxPrice": "..."},
+  "device2": {"name": "الاسم الكامل للجهاز 2", "screen": "...", "processor": "...", "ram": "...", "storage": "...", "rearCamera": "...", "frontCamera": "...", "battery": "...", "charging": "...", "os": "...", "build": "...", "releaseYear": "...", "approxPrice": "..."}
+}
+اكتب كل القيم باللغة العربية بإيجاز شديد (أقل من 12 كلمة لكل حقل). إذا لم تجد الجهاز، اكتب "غير متوفر" في حقوله.`;
+
+            try {
+                const response = await fetch("https://api.anthropic.com/v1/messages", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        model: "claude-sonnet-4-6",
+                        max_tokens: 1000,
+                        messages: [{ role: "user", content: prompt }],
+                        tools: [{ type: "web_search_20250305", name: "web_search" }]
+                    })
+                });
+
+                const data = await response.json();
+                const textBlocks = (data.content || [])
+                    .filter(block => block.type === 'text')
+                    .map(block => block.text)
+                    .join('\n');
+
+                const cleaned = textBlocks.replace(/```json|```/g, '').trim();
+                const jsonMatch = cleaned.match(/\{[\s\S]*\}/);
+                if (!jsonMatch) throw new Error('لم يتم العثور على بيانات صالحة');
+
+                const parsed = JSON.parse(jsonMatch[0]);
+                renderCompareResult(parsed.device1, parsed.device2);
+
+                statusEl.className = 'compare-status';
+                statusEl.innerText = 'تم جلب المواصفات بنجاح ✅';
+            } catch (err) {
+                console.error('Compare error:', err);
+                statusEl.className = 'compare-status error';
+                statusEl.innerText = 'تعذّر جلب المواصفات حالياً، حاول مرة أخرى أو تواصل معنا مباشرة عبر واتساب.';
+            }
+        }
+
+        function renderCompareResult(d1, d2) {
+            const table = document.getElementById('compareTable');
+            const resultWrap = document.getElementById('compareResultWrap');
+            const hintEl = document.getElementById('compareHint');
+            const orderRow = document.getElementById('compareOrderRow');
+
+            let html = '<thead><tr><th>المواصفة</th><th><div class="compare-device-name">' +
+                escapeHtml(d1.name) + '</div></th><th><div class="compare-device-name">' +
+                escapeHtml(d2.name) + '</div></th></tr></thead><tbody>';
+
+            compareSpecRows.forEach(row => {
+                html += '<tr><td>' + escapeHtml(row.label) + '</td><td>' +
+                    escapeHtml(d1[row.key]) + '</td><td>' + escapeHtml(d2[row.key]) + '</td></tr>';
+            });
+            html += '</tbody>';
+
+            table.innerHTML = html;
+            resultWrap.style.display = 'block';
+            hintEl.style.display = 'block';
+
+            orderRow.innerHTML =
+                '<button class="compare-order-btn" onclick="quickOrder(\'استفسار مقارنة: ' + (d1.name || '').replace(/'/g, '') + '\')">اطلب ' + escapeHtml(d1.name) + '</button>' +
+                '<button class="compare-order-btn" onclick="quickOrder(\'استفسار مقارنة: ' + (d2.name || '').replace(/'/g, '') + '\')">اطلب ' + escapeHtml(d2.name) + '</button>';
+            orderRow.style.display = 'flex';
         }
 
         function quickOrder(itemName) {
